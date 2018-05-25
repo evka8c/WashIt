@@ -84,7 +84,6 @@
   [
     "name" : "CheckCustomerTask",
     "parameters" : [
-        "Url" : new StringDataType(),
         "Customer" : new ObjectDataType(),
     ],
     "displayName" : "CheckCustomerTask",
@@ -94,11 +93,10 @@
   [
     "name" : "CreateCustomerTask",
     "parameters" : [
-        "Url" : new StringDataType(),
         "Customer" : new ObjectDataType(),
     ],
     "results" : [
-        "ActivationCode" : new StringDataType(),
+        "Result" : new ObjectDataType(),
     ],
     "displayName" : "CreateCustomerTask",
     "icon" : "defaultservicenodeicon.png"

@@ -26,7 +26,9 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
         
         // Do some work
         String json = jsonGetRequest(url);
-        System.out.println("Customers: " + json);
+        if (json.contains(customer.getEmail())) {
+            System.out.println("USER EXISTS!!!!");
+        };
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

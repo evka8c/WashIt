@@ -79,6 +79,16 @@
      "displayName" : "Decision Task",
      "icon" : "defaultdecisionicon.png",
      "category" : "Decision tasks"
-   ]
+   ],
+
+  [
+    "name" : "CheckCustomerTask",
+    "parameters" : [
+        "Url" : new StringDataType(),
+        "Customer" : new ObjectDataType(),
+    ],
+    "displayName" : "REST",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 
 ]

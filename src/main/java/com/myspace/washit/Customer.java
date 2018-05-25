@@ -5,10 +5,9 @@ package com.myspace.washit;
  */
 
 @javax.persistence.Entity
-public class Customer implements java.io.Serializable 
-{
+public class Customer implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
-	
+
 	@javax.persistence.GeneratedValue(generator = "CUSTOMER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
 	@javax.persistence.Id
 	@javax.persistence.SequenceGenerator(name = "CUSTOMER_ID_GENERATOR", sequenceName = "CUSTOMER_ID_SEQ")
@@ -20,13 +19,12 @@ public class Customer implements java.io.Serializable
 	private java.lang.String lastName;
 	@org.kie.api.definition.type.Label("E-mail")
 	private java.lang.String email;
-
-	@org.kie.api.definition.type.Label(value = "Address")
-	private com.myspace.washit.Address address;
+	@org.kie.api.definition.type.Label("Address")
+	private String address;
 
 	public Customer() {
 	}
-	
+
 	public java.lang.Long getId() {
 		return this.id;
 	}
@@ -50,7 +48,7 @@ public class Customer implements java.io.Serializable
 	public void setLastName(java.lang.String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	public java.lang.String getEmail() {
 		return this.email;
 	}
@@ -59,18 +57,18 @@ public class Customer implements java.io.Serializable
 		this.email = email;
 	}
 
-	public com.myspace.washit.Address getAddress() {
+	public java.lang.String getAddress() {
 		return this.address;
 	}
 
-	public void setAddress(com.myspace.washit.Address address) {
+	public void setAddress(java.lang.String address) {
 		this.address = address;
 	}
 
-	public Customer(java.lang.Long id, java.lang.String firstName, 
-	        java.lang.String lastName, java.lang.String email,
-	        com.myspace.washit.Address address) {
-	    this.id = id;
+	public Customer(java.lang.Long id, java.lang.String firstName,
+			java.lang.String lastName, java.lang.String email,
+			java.lang.String address) {
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;

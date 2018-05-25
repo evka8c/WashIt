@@ -6,12 +6,47 @@ package com.myspace.washit;
 
 public class Address implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Address() {
-    }
+	@org.kie.api.definition.type.Label(value = "Street")
+	private java.lang.String street;
+	@org.kie.api.definition.type.Label(value = "City")
+	private java.lang.String city;
+	@org.kie.api.definition.type.Label(value = "Postal Code")
+	private java.math.BigDecimal postalCode;
 
+	public Address() {
+	}
 
+	public java.lang.String getStreet() {
+		return this.street;
+	}
 
+	public void setStreet(java.lang.String street) {
+		this.street = street;
+	}
+
+	public java.lang.String getCity() {
+		return this.city;
+	}
+
+	public void setCity(java.lang.String city) {
+		this.city = city;
+	}
+
+	public java.math.BigDecimal getPostalCode() {
+		return this.postalCode;
+	}
+
+	public void setPostalCode(java.math.BigDecimal postalCode) {
+		this.postalCode = postalCode;
+	}
+
+	public Address(java.lang.String street, java.lang.String city,
+			java.math.BigDecimal postalCode) {
+		this.street = street;
+		this.city = city;
+		this.postalCode = postalCode;
+	}
 
 }

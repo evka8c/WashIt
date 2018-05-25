@@ -1,6 +1,6 @@
 package com.myspace.washit;
 
-import com.myspace.Customer;
+import com.myspace.washit.Customer;
 import java.util.HashMap;
 
 import org.kie.api.runtime.process.WorkItem;

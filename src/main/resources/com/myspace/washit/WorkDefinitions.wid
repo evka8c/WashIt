@@ -87,7 +87,7 @@
         "Url" : new StringDataType(),
         "Customer" : new ObjectDataType(),
     ],
-    "displayName" : "REST",
+    "displayName" : "CheckCustomerTask",
     "icon" : "defaultservicenodeicon.png"
   ],
 

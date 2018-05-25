@@ -6,12 +6,47 @@ package com.myspace.washit;
 
 public class Customer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Customer() {
-    }
+	@org.kie.api.definition.type.Label(value = "E-mail")
+	private java.lang.String email;
+	@org.kie.api.definition.type.Label(value = "First Name")
+	private java.lang.String firstName;
+	@org.kie.api.definition.type.Label(value = "Last Name")
+	private java.lang.String lastName;
 
+	public Customer() {
+	}
 
+	public java.lang.String getEmail() {
+		return this.email;
+	}
 
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public java.lang.String getFirstName() {
+		return this.firstName;
+	}
+
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
+
+	public java.lang.String getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(java.lang.String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Customer(java.lang.String email, java.lang.String firstName,
+			java.lang.String lastName) {
+		this.email = email;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 }

@@ -96,7 +96,7 @@
         "Customer" : new ObjectDataType(),
     ],
     "results" : [
-        "Result" : new ObjectDataType(),
+        "ActivationCode" : new StringDataType(),
     ],
     "displayName" : "CreateCustomerTask",
     "icon" : "defaultservicenodeicon.png"

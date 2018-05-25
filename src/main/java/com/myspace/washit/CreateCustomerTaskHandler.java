@@ -22,7 +22,9 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         // Do some work
         
         // Notify manager that work item has been completed
-        manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
+        Map<String,Object> result = new HashMap<String,Object>();
+        result.put("ActivationCode", "12345678");
+        manager.completeWorkItem(workItem.getId(), result);
     }
     
     public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}

@@ -14,7 +14,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
 
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
-        String url = "https://washit-18577.firebaseio.com/customers.json";
+        String url = "https%3A%2F%2Fwashit%2D18577%2Efirebaseio%2Ecom%2Fcustomers%2Ejson";
         
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");

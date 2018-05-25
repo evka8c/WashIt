@@ -16,6 +16,12 @@
             <parameters/>
             <name>Email</name>
         </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.washitinc.washit.CheckCustomerTaskHandler()</identifier>
+            <parameters/>
+            <name>CheckCustomerTask</name>
+        </work-item-handler>
     </work-item-handlers>
     <environment-entries/>
     <configurations/>

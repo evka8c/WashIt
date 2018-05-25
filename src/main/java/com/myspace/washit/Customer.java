@@ -8,12 +8,15 @@ public class Customer implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "E-mail")
+	@org.kie.api.definition.type.Label("E-mail")
 	private java.lang.String email;
-	@org.kie.api.definition.type.Label(value = "First Name")
+	@org.kie.api.definition.type.Label("First Name")
 	private java.lang.String firstName;
-	@org.kie.api.definition.type.Label(value = "Last Name")
+	@org.kie.api.definition.type.Label("Last Name")
 	private java.lang.String lastName;
+
+	@org.kie.api.definition.type.Label(value = "Address")
+	private com.myspace.washit.Address address;
 
 	public Customer() {
 	}
@@ -42,11 +45,20 @@ public class Customer implements java.io.Serializable {
 		this.lastName = lastName;
 	}
 
+	public com.myspace.washit.Address getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(com.myspace.washit.Address address) {
+		this.address = address;
+	}
+
 	public Customer(java.lang.String email, java.lang.String firstName,
-			java.lang.String lastName) {
+			java.lang.String lastName, com.myspace.washit.Address address) {
 		this.email = email;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.address = address;
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
 import javax.json.Json;
+import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
 import org.kie.api.runtime.process.WorkItem;

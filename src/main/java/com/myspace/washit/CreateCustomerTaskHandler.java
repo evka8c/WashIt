@@ -60,7 +60,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
 		    
 		    int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'POST' request to URL : " + url);
-		    System.out.println("Post parameters : " + urlParameters);
+		    System.out.println("Post parameters : " + json);
 		    System.out.println("Response Code : " + responseCode);
 
 		    BufferedReader in = new BufferedReader(

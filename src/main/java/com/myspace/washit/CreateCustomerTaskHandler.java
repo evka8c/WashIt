@@ -46,7 +46,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             https.setRequestMethod("POST");
             https.setDoOutput(true);
         } catch (Exception e){
-            
+            e.printStackTrace();
         }
 
         System.out.println("Customer" + customer.getId());

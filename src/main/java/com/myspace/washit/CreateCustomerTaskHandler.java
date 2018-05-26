@@ -86,7 +86,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
 
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();
-        result.put("Passphrase", passphrase);
+        result.put("RegistrationCode", registrationCode);
         result.put("Customer", customer);
         manager.completeWorkItem(workItem.getId(), result);
     }

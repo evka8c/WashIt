@@ -39,8 +39,8 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .add("email", customer.getEmail())
             .add("firstName", customer.getFirstName())
             .add("lastName", customer.getLastName())
-            .add("password", customer.getPassword())
             .add("passphrase", customer.getPassphrase())
+            .add("password", customer.getCustomerPassword()
             .build()
             .toString();
         

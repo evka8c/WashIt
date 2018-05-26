@@ -28,7 +28,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");
         
-        // Generate passphrase
+        // Generate registration code
         String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
         customer.setRegistrationCode(registrationCode);
         

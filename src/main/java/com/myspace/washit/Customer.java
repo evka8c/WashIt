@@ -22,6 +22,10 @@ public class Customer implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Address")
 	private String address;
 
+	private java.lang.String passphrase;
+
+	private java.lang.Boolean activated;
+
 	public Customer() {
 	}
 
@@ -65,14 +69,33 @@ public class Customer implements java.io.Serializable {
 		this.address = address;
 	}
 
+	public java.lang.String getPassphrase() {
+		return this.passphrase;
+	}
+
+	public void setPassphrase(java.lang.String passphrase) {
+		this.passphrase = passphrase;
+	}
+
+	public java.lang.Boolean getActivated() {
+		return this.activated;
+	}
+
+	public void setActivated(java.lang.Boolean activated) {
+		this.activated = activated;
+	}
+
 	public Customer(java.lang.Long id, java.lang.String firstName,
 			java.lang.String lastName, java.lang.String email,
-			java.lang.String address) {
+			java.lang.String address, java.lang.String passphrase,
+			java.lang.Boolean activated) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.address = address;
+		this.passphrase = passphrase;
+		this.activated = activated;
 	}
 
 }

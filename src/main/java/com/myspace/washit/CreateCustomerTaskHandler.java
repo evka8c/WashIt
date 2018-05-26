@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
 import javax.json.Json;
+import javax.net.ssl.HttpsURLConnection;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -39,9 +40,9 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
 
 
         URLConnection con = new URL(url).openConnection();
-        HttpURLConnection http = (HttpURLConnection)con;
-        http.setRequestMethod("POST");
-        http.setDoOutput(true);
+        HttpsURLConnection https = (HttpURLConnection)con;
+        https.setRequestMethod("POST");
+        https.setDoOutput(true);
 
         System.out.println("Customer" + customer.getId());
         

@@ -31,13 +31,15 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         System.out.println("Audit Driver: " + passphrase);
 
         // Activate customer
-        customer.setActivated(true);
+        System.out.println("Audit Driver activated: " + customer.getActivated());
         
         // Store customer's data
         
+        
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();
-        result.put("ActivationCode", "12345678");
+        result.put("Passphrase", passphrase);
+        result.put("Customer", customer);
         manager.completeWorkItem(workItem.getId(), result);
     }
     

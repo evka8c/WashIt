@@ -2,6 +2,7 @@ package com.myspace.washit;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.Random;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;

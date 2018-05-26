@@ -30,7 +30,6 @@ public class Customer implements java.io.Serializable {
 	public Customer() {
 		this.passphrase = "";
 		this.activated = false;
-		this.password = "aaaaaa";
 	}
 
 	public Customer(java.lang.Long id) {

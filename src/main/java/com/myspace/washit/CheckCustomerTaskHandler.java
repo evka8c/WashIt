@@ -4,7 +4,7 @@ import com.myspace.washit.Customer;
 import java.util.HashMap;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
+import java.net.HttpsURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 

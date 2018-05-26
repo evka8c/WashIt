@@ -4,7 +4,6 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
 import javax.json.Json;
-import javax.json.JsonObject;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -38,7 +37,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .build()
             .toString();
         String customerJson = Json.createObjectBuilder()
-            .add(customer.getId(), json)
+            .add(customer.getId().toString(), json)
             .build()
             .toString();
         System.out.println("Customer" + customerJson);

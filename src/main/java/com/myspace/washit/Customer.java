@@ -13,6 +13,19 @@ public class Customer implements java.io.Serializable {
     @javax.persistence.Id
     @javax.persistence.SequenceGenerator(name = "CUSTOMER_ID_GENERATOR", sequenceName = "CUSTOMER_ID_SEQ")
     private java.lang.Long id;
+    
+    @org.kie.api.definition.type.Label("First Name")
+	private java.lang.String firstName;
+	@org.kie.api.definition.type.Label("Last Name")
+	private java.lang.String lastName;
+	@org.kie.api.definition.type.Label("E-mail")
+	private java.lang.String email;
+	@org.kie.api.definition.type.Label("Address")
+	private String address;
+	private java.lang.String passphrase;
+	private java.lang.Boolean activated;
+	private java.lang.String password;
+
 
     public Customer() {
 		this.passphrase = "";

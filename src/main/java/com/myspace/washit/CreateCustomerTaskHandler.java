@@ -36,10 +36,13 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .add("passphrase", customer.getPassphrase())
             .build()
             .toString();
-        //String customerJson = Json.createObjectBuilder()
-        //    .add(Long.toString(customer.getId()), json)
-        //    .build()
-        //    .toString();
+
+
+        URLConnection con = new URL(url).openConnection();
+        HttpURLConnection http = (HttpURLConnection)con;
+        http.setRequestMethod("POST");
+        http.setDoOutput(true);
+
         System.out.println("Customer" + customer.getId());
         
         // Notify manager that work item has been completed

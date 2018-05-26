@@ -50,16 +50,28 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
     {
         String json = null;
         try {
-            URL url = new URL(urlQueryString);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setDoOutput(true);
-            connection.setInstanceFollowRedirects(false);
-            connection.setRequestMethod("GET");
-            connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("charset", "utf-8");
-            connection.connect();
-            InputStream inStream = connection.getInputStream();
+            HttpsURLConnection con = (HttpsURLConnection) new URL(urlQueryString).openConnection();
+            
+            // Header
+            con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
+            con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+            con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+
+            // Send
+            con.setDoOutput(true);
+            con.setInstanceFollowRedirects(false);
+            con.connect();
+            InputStream inStream = con.getInputStream();
             json = streamToString(inStream);
+            
+            int responseCode = con.getResponseCode();
+		    System.out.println("\nSending 'GET' request to URL : " + url);
+		    System.out.println("Response Code : " + responseCode);
+		    
+		    // Respond
+		    System.out.println(json);
+		    
         }   catch (IOException ex) {
             ex.printStackTrace();
         }

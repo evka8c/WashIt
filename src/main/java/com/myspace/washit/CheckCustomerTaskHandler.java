@@ -29,7 +29,7 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
         String json = jsonGetRequest(url);
         if (json.contains(customer.getEmail())) {
             System.out.println("EMAIL ALREADY EXISTS!!!!");
-            throw new RuntimeException("There is already a user with filled email address.")
+            throw new RuntimeException("There is already a user with filled email address.");
         };
         
         // Notify manager that work item has been completed

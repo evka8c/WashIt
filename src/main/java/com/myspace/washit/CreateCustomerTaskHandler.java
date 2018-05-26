@@ -32,6 +32,8 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         String passphrase = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
         customer.setPassphrase(passphrase);
         
+        System.out.println("\nSending 'POST' request to URL : " + customer.getTetris());
+        
         // Store customer's data
         String json = Json.createObjectBuilder()
             .add("activated", customer.getActivated())

@@ -27,7 +27,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         customer.setPassphrase(passphrase);
         
         // Store customer's data
-        String customerJson = Json.createObjectBuilder()
+        String json = Json.createObjectBuilder()
             .add("activated", customer.getActivated())
             .add("address", customer.getAddress())
             .add("email", customer.getEmail())
@@ -36,6 +36,11 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .add("passphrase", customer.getPassphrase())
             .build()
             .toString();
+        String customerJson = Json.createObjectBuilder()
+            .add(customer.getId(), json)
+            .build()
+            .toString();
+        System.out.println("Customer" + customerJson);
         
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();

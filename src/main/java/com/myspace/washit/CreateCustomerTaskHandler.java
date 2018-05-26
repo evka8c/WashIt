@@ -6,7 +6,6 @@ import java.util.HashMap;
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
 import org.kie.api.runtime.process.WorkItemManager;
-import org.apache.commons.text.RandomStringGenerator;
 
 public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItemHandler
 {
@@ -22,12 +21,9 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Generate passphrase
-        RandomStringGenerator randomStringGenerator =
-        new RandomStringGenerator.Builder()
-                .withinRange('0', 'z')
-                .filteredBy(CharacterPredicates.LETTERS, CharacterPredicates.DIGITS)
-                .build();
-        
+        String passphrase = Long.toHexString(Double.doubleToLongBits(Math.random()));
+
+
         // Activate customer
         
         // Store customer's data

@@ -25,6 +25,9 @@ public class Customer implements java.io.Serializable {
 	private java.lang.String passphrase;
 	private java.lang.Boolean activated;
 
+	@org.kie.api.definition.type.Label(value = "Password")
+	private java.lang.String customerPassword;
+
 	public Customer() {
 		this.passphrase = "";
 		this.activated = false;
@@ -89,11 +92,19 @@ public class Customer implements java.io.Serializable {
 	public void setActivated(java.lang.Boolean activated) {
 		this.activated = activated;
 	}
-	
+
+	public java.lang.String getCustomerPassword() {
+		return this.customerPassword;
+	}
+
+	public void setCustomerPassword(java.lang.String customerPassword) {
+		this.customerPassword = customerPassword;
+	}
+
 	public Customer(java.lang.Long id, java.lang.String firstName,
 			java.lang.String lastName, java.lang.String email,
 			java.lang.String address, java.lang.String passphrase,
-			java.lang.Boolean activated) {
+			java.lang.Boolean activated, java.lang.String customerPassword) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -101,5 +112,6 @@ public class Customer implements java.io.Serializable {
 		this.address = address;
 		this.passphrase = passphrase;
 		this.activated = activated;
+		this.customerPassword = customerPassword;
 	}
 }

@@ -22,7 +22,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         
         // Generate passphrase
         String passphrase = Long.toHexString(Double.doubleToLongBits(Math.random().nextLong()))+
-            Long.toHexString(Double.doubleToLongBits(Random().nextLong())+
+            Long.toHexString(Double.doubleToLongBits(Random().nextLong()))+
             Long.toHexString(Double.doubleToLongBits(Math.random().nextLong()))+
             Long.toHexString(Double.doubleToLongBits(Math.random().nextLong()))+
             Long.toHexString(Double.doubleToLongBits(Math.random().nextLong()))+

@@ -39,12 +39,15 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .add("passphrase", customer.getPassphrase())
             .build()
             .toString();
-
-
-        URLConnection con = new URL(url).openConnection();
-        HttpsURLConnection https = (HttpsURLConnection) con;
-        https.setRequestMethod("POST");
-        https.setDoOutput(true);
+        
+        try {
+            URLConnection con = new URL(url).openConnection();
+            HttpsURLConnection https = (HttpsURLConnection) con;
+            https.setRequestMethod("POST");
+            https.setDoOutput(true);
+        } catch (Exception e){
+            
+        }
 
         System.out.println("Customer" + customer.getId());
         

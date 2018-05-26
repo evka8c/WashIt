@@ -29,8 +29,8 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Generate passphrase
-        String passphrase = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
-        customer.setPassphrase(passphrase);
+        String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
+        customer.setRegistrationCode(registrationCode);
         
         System.out.println("\nSending 'POST' request to URL : " + customer.getTetris());
         
@@ -41,7 +41,8 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .add("email", customer.getEmail())
             .add("firstName", customer.getFirstName())
             .add("lastName", customer.getLastName())
-            .add("passphrase", customer.getPassphrase())
+            .add("password", customer.getLastName())
+            .add("registrationCode", customer.getRegistrationCode())
             .build()
             .toString();
         

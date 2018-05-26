@@ -22,12 +22,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Generate passphrase
-        String passphrase = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()))+
-            Long.toHexString(Double.doubleToLongBits(new Random().nextLong()))+
-            Long.toHexString(Double.doubleToLongBits(new Random().nextLong()))+
-            Long.toHexString(Double.doubleToLongBits(new Random().nextLong()))+
-            Long.toHexString(Double.doubleToLongBits(new Random().nextLong()))+
-            Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
+        String passphrase = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
         customer.setPassphrase(passphrase);
         System.out.println("Audit Driver: " + passphrase);
 

@@ -22,11 +22,11 @@ public class Customer implements java.io.Serializable {
 	private java.lang.String email;
 	@org.kie.api.definition.type.Label("Address")
 	private String address;
-	@org.kie.api.definition.type.Label("Password")
-	private java.lang.String password;
-	
 	private java.lang.String passphrase;
 	private java.lang.Boolean activated;
+
+	@org.kie.api.definition.type.Label(value = "Password")
+	private java.lang.String customerPassword;
 
 	public Customer() {
 		this.passphrase = "";
@@ -93,14 +93,14 @@ public class Customer implements java.io.Serializable {
 		this.activated = activated;
 	}
 
-	public java.lang.String getPassword() {
-		return this.password;
+	public java.lang.String getCustomerPassword() {
+		return this.customerPassword;
 	}
 
-	public void setPassword(java.lang.String password) {
-		this.password = password;
+	public void setCustomerPassword(java.lang.String customerPassword) {
+		this.customerPassword = customerPassword;
 	}
-
+	
 	public Customer(java.lang.Long id, java.lang.String firstName,
 			java.lang.String lastName, java.lang.String email,
 			java.lang.String address, java.lang.String passphrase,

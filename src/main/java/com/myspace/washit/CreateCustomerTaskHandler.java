@@ -2,6 +2,7 @@ package com.myspace.washit;
 
 import java.util.Map;
 import java.util.HashMap;
+import org.apache.commons.text.RandomStringGenerator;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -20,7 +21,11 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");
         
-        // Do some work
+        // Generate passphrase
+        
+        // Activate customer
+        
+        // Store customer's data
         
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();

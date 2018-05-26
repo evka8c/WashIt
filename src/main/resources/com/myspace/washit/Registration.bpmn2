@@ -12,7 +12,6 @@
   <bpmn2:itemDefinition id="__A503E55A-4762-4D85-B7BA-B8DFDB07C2BD_FromInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__F76BCDFF-57C6-4684-ACB9-DDCAF2717149_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__F1865341-09B1-41CE-A10B-13A8666DC2D8_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__F1865341-09B1-41CE-A10B-13A8666DC2D8_PassphraseOutputXItem" structureRef="String"/>
   <bpmn2:process id="src.Registration" drools:packageName="com.myspace.washit" drools:version="1.0" name="Registration" isExecutable="true">
     <bpmn2:property id="customer" itemSubjectRef="_customerItem"/>
     <bpmn2:property id="registrationCode" itemSubjectRef="_registrationCodeItem"/>
@@ -189,13 +188,9 @@
       <bpmn2:outgoing>_32F94A57-E419-4D3E-86F9-3698BAA2D962</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_OFpwSWEnEeiSv_ClUID0OQ">
         <bpmn2:dataInput id="_F1865341-09B1-41CE-A10B-13A8666DC2D8_TaskNameInputX" drools:dtype="String" itemSubjectRef="__F1865341-09B1-41CE-A10B-13A8666DC2D8_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataOutput id="_F1865341-09B1-41CE-A10B-13A8666DC2D8_PassphraseOutputX" drools:dtype="String" itemSubjectRef="__F1865341-09B1-41CE-A10B-13A8666DC2D8_PassphraseOutputXItem" name="Passphrase"/>
         <bpmn2:inputSet id="_OFpwSmEnEeiSv_ClUID0OQ">
           <bpmn2:dataInputRefs>_F1865341-09B1-41CE-A10B-13A8666DC2D8_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_OFpwS2EnEeiSv_ClUID0OQ">
-          <bpmn2:dataOutputRefs>_F1865341-09B1-41CE-A10B-13A8666DC2D8_PassphraseOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OFpwTGEnEeiSv_ClUID0OQ">
         <bpmn2:targetRef>_F1865341-09B1-41CE-A10B-13A8666DC2D8_TaskNameInputX</bpmn2:targetRef>
@@ -204,10 +199,6 @@
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OFpwT2EnEeiSv_ClUID0OQ">_F1865341-09B1-41CE-A10B-13A8666DC2D8_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OFpwUGEnEeiSv_ClUID0OQ">
-        <bpmn2:sourceRef>_F1865341-09B1-41CE-A10B-13A8666DC2D8_PassphraseOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>passphrase</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:task>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="_OFpwUWEnEeiSv_ClUID0OQ">

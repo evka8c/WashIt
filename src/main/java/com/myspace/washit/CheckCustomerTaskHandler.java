@@ -46,11 +46,11 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
         return text;
     }
     
-    private static String jsonGetRequest(String urlQueryString) 
+    private static String jsonGetRequest(String url) 
     {
         String json = null;
         try {
-            HttpsURLConnection con = (HttpsURLConnection) new URL(urlQueryString).openConnection();
+            HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
             // Header
             con.setRequestMethod("GET");

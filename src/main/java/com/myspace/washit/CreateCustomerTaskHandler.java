@@ -24,10 +24,6 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         // Generate passphrase
         String passphrase = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
         customer.setPassphrase(passphrase);
-        System.out.println("Audit Driver: " + passphrase);
-
-        // Activate customer
-        System.out.println("Audit Driver activated: " + customer.getActivated());
         
         // Store customer's data
         

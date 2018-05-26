@@ -21,12 +21,12 @@ public class Customer implements java.io.Serializable {
 	private java.lang.String email;
 	@org.kie.api.definition.type.Label("Address")
 	private String address;
-
 	private java.lang.String passphrase;
-
 	private java.lang.Boolean activated;
 
 	public Customer() {
+	    this.passphrase = "";
+	    this.activated = false;
 	}
 
 	public java.lang.Long getId() {

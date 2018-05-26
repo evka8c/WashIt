@@ -2,7 +2,6 @@ package com.myspace.washit;
 
 import java.util.Map;
 import java.util.HashMap;
-import org.apache.commons.text.RandomStringGenerator;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -22,6 +21,11 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Generate passphrase
+        RandomStringGenerator randomStringGenerator =
+        new RandomStringGenerator.Builder()
+                .withinRange('0', 'z')
+                .filteredBy(CharacterPredicates.LETTERS, CharacterPredicates.DIGITS)
+                .build();
         
         // Activate customer
         

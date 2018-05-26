@@ -25,8 +25,11 @@ public class Customer implements java.io.Serializable {
 	private java.lang.String passphrase;
 	private java.lang.Boolean activated;
 
-	@org.kie.api.definition.type.Label(value = "Password")
+	@org.kie.api.definition.type.Label("Password")
 	private java.lang.String customerPassword;
+
+	@org.kie.api.definition.type.Label(value = "Tetris")
+	private java.lang.String tetris;
 
 	public Customer() {
 		this.passphrase = "";
@@ -101,10 +104,19 @@ public class Customer implements java.io.Serializable {
 		this.customerPassword = customerPassword;
 	}
 
+	public java.lang.String getTetris() {
+		return this.tetris;
+	}
+
+	public void setTetris(java.lang.String tetris) {
+		this.tetris = tetris;
+	}
+
 	public Customer(java.lang.Long id, java.lang.String firstName,
 			java.lang.String lastName, java.lang.String email,
 			java.lang.String address, java.lang.String passphrase,
-			java.lang.Boolean activated, java.lang.String customerPassword) {
+			java.lang.Boolean activated, java.lang.String customerPassword,
+			java.lang.String tetris) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -113,5 +125,6 @@ public class Customer implements java.io.Serializable {
 		this.passphrase = passphrase;
 		this.activated = activated;
 		this.customerPassword = customerPassword;
+		this.tetris = tetris;
 	}
 }

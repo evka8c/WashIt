@@ -6,12 +6,93 @@ package com.myspace.washit;
 
 public class Customer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Customer() {
-    }
+	private java.lang.Boolean activated;
+	@org.kie.api.definition.type.Label(value = "Address")
+	private java.lang.String address;
+	@org.kie.api.definition.type.Label(value = "Password")
+	private java.lang.String password;
+	@org.kie.api.definition.type.Label(value = "Email")
+	private java.lang.String email;
+	@org.kie.api.definition.type.Label(value = "First Name")
+	private java.lang.String firstName;
+	@org.kie.api.definition.type.Label(value = "Last Name")
+	private java.lang.String lastName;
+	private java.lang.String registrationCode;
+	
+	public Customer() {
+		this.passphrase = "";
+		this.activated = false;
+	}
 
+	public java.lang.Boolean getActivated() {
+		return this.activated;
+	}
 
+	public void setActivated(java.lang.Boolean activated) {
+		this.activated = activated;
+	}
 
+	public java.lang.String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public java.lang.String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(java.lang.String password) {
+		this.password = password;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public java.lang.String getFirstName() {
+		return this.firstName;
+	}
+
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
+
+	public java.lang.String getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(java.lang.String lastName) {
+		this.lastName = lastName;
+	}
+
+	public java.lang.String getRegistrationCode() {
+		return this.registrationCode;
+	}
+
+	public void setRegistrationCode(java.lang.String registrationCode) {
+		this.registrationCode = registrationCode;
+	}
+
+	public Customer(java.lang.Boolean activated, java.lang.String address,
+			java.lang.String password, java.lang.String email,
+			java.lang.String firstName, java.lang.String lastName,
+			java.lang.String registrationCode) {
+		this.activated = activated;
+		this.address = address;
+		this.password = password;
+		this.email = email;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.registrationCode = registrationCode;
+	}
 
 }

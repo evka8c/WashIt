@@ -32,8 +32,6 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
         customer.setRegistrationCode(registrationCode);
         
-        System.out.println("\nSending 'POST' request to URL : " + customer.getTetris());
-        
         // Store customer's data
         String json = Json.createObjectBuilder()
             .add("activated", customer.getActivated())

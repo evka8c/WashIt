@@ -6,7 +6,7 @@ import java.util.HashMap;
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
 import org.kie.api.runtime.process.WorkItemManager;
-import org.apache.commons.text.*;
+import org.apache.commons.text.RandomStringGenerator;
 
 public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItemHandler
 {

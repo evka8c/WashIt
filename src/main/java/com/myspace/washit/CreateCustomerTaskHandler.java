@@ -44,7 +44,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             .toString();
         
         try {
-            HttpsURLConnection con = new URL(url).openConnection();
+            HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
             // Header
             con.setRequestMethod("POST");

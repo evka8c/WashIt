@@ -24,9 +24,12 @@ public class Customer implements java.io.Serializable {
 	private java.lang.String passphrase;
 	private java.lang.Boolean activated;
 
+	private java.lang.String password;
+
 	public Customer() {
-	    this.passphrase = "";
-	    this.activated = false;
+		this.passphrase = "";
+		this.activated = false;
+		this.password = "aaaaaa";
 	}
 
 	public java.lang.Long getId() {
@@ -85,10 +88,18 @@ public class Customer implements java.io.Serializable {
 		this.activated = activated;
 	}
 
+	public java.lang.String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(java.lang.String password) {
+		this.password = password;
+	}
+
 	public Customer(java.lang.Long id, java.lang.String firstName,
 			java.lang.String lastName, java.lang.String email,
 			java.lang.String address, java.lang.String passphrase,
-			java.lang.Boolean activated) {
+			java.lang.Boolean activated, java.lang.String password) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -96,6 +107,7 @@ public class Customer implements java.io.Serializable {
 		this.address = address;
 		this.passphrase = passphrase;
 		this.activated = activated;
+		this.password = password;
 	}
 
 }

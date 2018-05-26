@@ -22,7 +22,7 @@ public class Customer implements java.io.Serializable {
 	private java.lang.String registrationCode;
 	
 	public Customer() {
-		this.passphrase = "";
+		this.registrationCode = "";
 		this.activated = false;
 	}
 

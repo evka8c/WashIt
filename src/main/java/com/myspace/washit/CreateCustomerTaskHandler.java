@@ -48,7 +48,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             
             // Header
             con.setRequestMethod("POST");
-            con.setRequestProperty("User-Agent", USER_AGENT);
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
             con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
             con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
             

@@ -15,9 +15,12 @@ public class Customer implements java.io.Serializable {
     private java.lang.Long id;
 
     public Customer() {
-    }
-    
-    public Customer(java.lang.Long id) {
+		this.passphrase = "";
+		this.activated = false;
+		this.password = "aaaaaa";
+	}
+
+	public Customer(java.lang.Long id) {
         this.id = id;
     }
 
@@ -29,7 +32,73 @@ public class Customer implements java.io.Serializable {
         this.id = id;
     }
 
+	public java.lang.String getFirstName() {
+		return this.firstName;
+	}
 
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
 
+	public java.lang.String getLastName() {
+		return this.lastName;
+	}
 
+	public void setLastName(java.lang.String lastName) {
+		this.lastName = lastName;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public java.lang.String getAddress() {
+		return this.address;
+	}
+
+	public void setAddress(java.lang.String address) {
+		this.address = address;
+	}
+
+	public java.lang.String getPassphrase() {
+		return this.passphrase;
+	}
+
+	public void setPassphrase(java.lang.String passphrase) {
+		this.passphrase = passphrase;
+	}
+
+	public java.lang.Boolean getActivated() {
+		return this.activated;
+	}
+
+	public void setActivated(java.lang.Boolean activated) {
+		this.activated = activated;
+	}
+
+	public java.lang.String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(java.lang.String password) {
+		this.password = password;
+	}
+
+	public Customer(java.lang.Long id, java.lang.String firstName,
+			java.lang.String lastName, java.lang.String email,
+			java.lang.String address, java.lang.String passphrase,
+			java.lang.Boolean activated, java.lang.String password) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.address = address;
+		this.passphrase = passphrase;
+		this.activated = activated;
+		this.password = password;
+	}
 }

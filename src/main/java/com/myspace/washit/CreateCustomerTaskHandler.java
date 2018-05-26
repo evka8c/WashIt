@@ -3,6 +3,7 @@ package com.myspace.washit;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
+import javax.json;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -26,7 +27,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         customer.setPassphrase(passphrase);
         
         // Store customer's data
-        String jsonString = Json.createObjectBuilder();
+        String json = Json.createObjectBuilder();
         
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();

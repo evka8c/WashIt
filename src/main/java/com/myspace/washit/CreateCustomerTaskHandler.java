@@ -47,10 +47,10 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             https.setDoOutput(true);
             byte[] out = json.getBytes(StandardCharsets.UTF_8);
             int length = out.length;
-            http.setFixedLengthStreamingMode(length);
-            http.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-            http.connect();
-            OutputStream os = http.getOutputStream()
+            https.setFixedLengthStreamingMode(length);
+            https.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+            https.connect();
+            OutputStream os = https.getOutputStream()
             os.write(out);
         } catch (Exception e){
             e.printStackTrace();

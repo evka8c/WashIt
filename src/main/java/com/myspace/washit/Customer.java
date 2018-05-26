@@ -7,14 +7,14 @@ package com.myspace.washit;
 @javax.persistence.Entity
 public class Customer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    @javax.persistence.GeneratedValue(generator = "CUSTOMER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
-    @javax.persistence.Id
-    @javax.persistence.SequenceGenerator(name = "CUSTOMER_ID_GENERATOR", sequenceName = "CUSTOMER_ID_SEQ")
-    private java.lang.Long id;
-    
-    @org.kie.api.definition.type.Label("First Name")
+	@javax.persistence.GeneratedValue(generator = "CUSTOMER_ID_GENERATOR", strategy = javax.persistence.GenerationType.AUTO)
+	@javax.persistence.Id
+	@javax.persistence.SequenceGenerator(name = "CUSTOMER_ID_GENERATOR", sequenceName = "CUSTOMER_ID_SEQ")
+	private java.lang.Long id;
+
+	@org.kie.api.definition.type.Label("First Name")
 	private java.lang.String firstName;
 	@org.kie.api.definition.type.Label("Last Name")
 	private java.lang.String lastName;
@@ -24,26 +24,26 @@ public class Customer implements java.io.Serializable {
 	private String address;
 	private java.lang.String passphrase;
 	private java.lang.Boolean activated;
+	@org.kie.api.definition.type.Label("Password")
 	private java.lang.String password;
 
-
-    public Customer() {
+	public Customer() {
 		this.passphrase = "";
 		this.activated = false;
 		this.password = "aaaaaa";
 	}
 
 	public Customer(java.lang.Long id) {
-        this.id = id;
-    }
+		this.id = id;
+	}
 
-    public java.lang.Long getId() {
-        return this.id;
-    }
-    
-    public void setId(java.lang.Long id) {
-        this.id = id;
-    }
+	public java.lang.Long getId() {
+		return this.id;
+	}
+
+	public void setId(java.lang.Long id) {
+		this.id = id;
+	}
 
 	public java.lang.String getFirstName() {
 		return this.firstName;

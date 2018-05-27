@@ -26,8 +26,8 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Check if user exists
-        String json = jsonGetRequest(url);
-        if (!json.contains(customer.getEmail())) {
+        String jsonString = jsonGetRequest(url);
+        if (!jsonString.contains(customer.getEmail())) {
             System.out.println("CUSTOMER DOES NOT EXISTS!!!!");
             throw new RuntimeException("There is no customer with filled email address in system.");
         };
@@ -35,6 +35,8 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         System.out.println("CUSTOMER DOES EXISTS!!!!");
         System.out.println("Email: " + customer.getEmail());
         System.out.println("Password: " + customer.getPassword());
+        
+        JsonObject json = Json.createReader(new StringReader(jsonString)).readObject()
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

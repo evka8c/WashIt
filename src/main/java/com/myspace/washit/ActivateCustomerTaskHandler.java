@@ -24,6 +24,12 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
         Customer customer = (Customer) workItem.getParameter("Customer");
         String registrationCode = (String) workItem.getParameter("RegistrationCode");
         
+        // Check registration code
+        if (!customer.getRegistrationCode().equals(registrationCode) {
+            System.out.println("INVALID REGISTRATION CODE!!!!");
+            throw new RuntimeException("The entered registration code is invalid.");
+        };
+        
         // Prepare customer to activate url
         String url = "https://washit-18577.firebaseio.com/customers/" + customer.getFirebaseId() + "/.json";
         

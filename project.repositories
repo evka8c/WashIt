@@ -11,17 +11,17 @@
     <repository>
       <include>true</include>
       <metadata>
-        <id>guvnor-m2-repo</id>
-        <url>file:///Users/jm/Desktop/pv207-bpm-master/repositories/kie/global</url>
-        <source>PROJECT</source>
+        <id>local</id>
+        <url>/Users/jm/.m2/repository</url>
+        <source>LOCAL</source>
       </metadata>
     </repository>
     <repository>
       <include>true</include>
       <metadata>
-        <id>local</id>
-        <url>/Users/jm/.m2/repository</url>
-        <source>LOCAL</source>
+        <id>guvnor-m2-repo</id>
+        <url>file:///Users/jm/Desktop/pv207-bpm-master/repositories/kie/global</url>
+        <source>PROJECT</source>
       </metadata>
     </repository>
   </repositories>

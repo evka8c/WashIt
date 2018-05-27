@@ -44,7 +44,7 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
             DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 		    wr.writeBytes(json);
 		    wr.flush();
-		    wr.close();Redirects(false);
+		    wr.close();
 
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'PATCH' request to URL : " + url);

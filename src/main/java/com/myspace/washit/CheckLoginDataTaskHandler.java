@@ -51,7 +51,6 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         //for (javax.json.JsonValue jsonValue : value) {
           //  System.out.println(jsonValue);
         //}
-}
         
         
         // Notify manager that work item has been completed

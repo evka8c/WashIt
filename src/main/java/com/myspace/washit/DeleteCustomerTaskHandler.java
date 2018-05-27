@@ -43,9 +43,6 @@ public class DeleteCustomerTaskHandler implements java.io.Serializable,  WorkIte
 		    System.out.println("\nSending 'DELETE' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
 		    
-		    // Respond
-		    System.out.println(json);
-		    
         }   catch (IOException ex) {
             ex.printStackTrace();
         }

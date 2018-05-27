@@ -25,7 +25,7 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
         String registrationCode = (String) workItem.getParameter("RegistrationCode");
         
         // Check registration code
-        if (!customer.getRegistrationCode().equals(registrationCode) {
+        if (!customer.getRegistrationCode().equals(registrationCode)) {
             System.out.println("INVALID REGISTRATION CODE!!!!");
             throw new RuntimeException("The entered registration code is invalid.");
         };

@@ -9,18 +9,20 @@ public class Customer implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 
 	private java.lang.Boolean activated;
-	@org.kie.api.definition.type.Label(value = "Address")
+	@org.kie.api.definition.type.Label("Address")
 	private java.lang.String address;
-	@org.kie.api.definition.type.Label(value = "Password")
+	@org.kie.api.definition.type.Label("Password")
 	private java.lang.String password;
-	@org.kie.api.definition.type.Label(value = "Email")
+	@org.kie.api.definition.type.Label("Email")
 	private java.lang.String email;
-	@org.kie.api.definition.type.Label(value = "First Name")
+	@org.kie.api.definition.type.Label("First Name")
 	private java.lang.String firstName;
-	@org.kie.api.definition.type.Label(value = "Last Name")
+	@org.kie.api.definition.type.Label("Last Name")
 	private java.lang.String lastName;
 	private java.lang.String registrationCode;
-	
+
+	private java.lang.String firebaseId;
+
 	public Customer() {
 		this.registrationCode = "";
 		this.activated = false;
@@ -82,10 +84,18 @@ public class Customer implements java.io.Serializable {
 		this.registrationCode = registrationCode;
 	}
 
+	public java.lang.String getFirebaseId() {
+		return this.firebaseId;
+	}
+
+	public void setFirebaseId(java.lang.String firebaseId) {
+		this.firebaseId = firebaseId;
+	}
+
 	public Customer(java.lang.Boolean activated, java.lang.String address,
 			java.lang.String password, java.lang.String email,
 			java.lang.String firstName, java.lang.String lastName,
-			java.lang.String registrationCode) {
+			java.lang.String registrationCode, java.lang.String firebaseId) {
 		this.activated = activated;
 		this.address = address;
 		this.password = password;
@@ -93,6 +103,7 @@ public class Customer implements java.io.Serializable {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.registrationCode = registrationCode;
+		this.firebaseId = firebaseId;
 	}
 
 }

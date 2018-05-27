@@ -121,5 +121,14 @@
     "displayName" : "ActivateCustomerTask",
     "icon" : "defaultservicenodeicon.png"
   ],
+  
+  [
+    "name" : "CheckLoginDataTask",
+    "parameters" : [
+        "Customer" : new ObjectDataType(),
+    ],
+    "displayName" : "CheckLoginDataTask",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 
 ]

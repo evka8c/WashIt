@@ -8,7 +8,7 @@ import java.io.StringReader;
 import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
 import java.util.Scanner;
-import javax.json.StringReader;
+import javax.json.Json;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;

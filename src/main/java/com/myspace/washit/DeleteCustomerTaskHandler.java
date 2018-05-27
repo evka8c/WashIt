@@ -40,7 +40,7 @@ public class DeleteCustomerTaskHandler implements java.io.Serializable,  WorkIte
             con.setInstanceFollowRedirects(false);
             con.connect();
             InputStream inStream = con.getInputStream();
-            json = streamToString(inStream);
+            String json = streamToString(inStream);
             
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'GET' request to URL : " + url);

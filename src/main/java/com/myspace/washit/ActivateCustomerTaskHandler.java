@@ -24,6 +24,12 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
         // Prepare customer to activate url
         String url = "https://washit-18577.firebaseio.com/customers/" + customer.getFirebaseId() + "/.json";
         
+        // Prepare activated json
+        String json = Json.createObjectBuilder()
+            .add("activated", true)
+            .build()
+            .toString();
+        
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
@@ -35,11 +41,14 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
 
             // Send
             con.setDoOutput(true);
-            con.setInstanceFollowRedirects(false);
-            con.connect();
-            
+            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+		    wr.writeBytes(json);
+		    wr.flush();
+		    wr.close();Redirects(false);
+
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'PATCH' request to URL : " + url);
+		    System.out.println("Patch parameters : " + json);
 		    System.out.println("Response Code : " + responseCode);
 		    
         }   catch (IOException ex) {

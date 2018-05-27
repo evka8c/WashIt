@@ -115,6 +115,7 @@
     "name" : "ActivateCustomerTask",
     "parameters" : [
         "Customer" : new ObjectDataType(),
+        "RegistrationCode" : new StringDataType(),
     ],
     "displayName" : "ActivateCustomerTask",
     "icon" : "defaultservicenodeicon.png"

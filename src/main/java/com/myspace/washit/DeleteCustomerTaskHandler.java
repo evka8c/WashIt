@@ -2,7 +2,6 @@ package com.myspace.washit;
 
 import com.myspace.washit.Customer;
 import java.util.HashMap;
-import java.io.InputStream;
 import java.io.IOException;
 import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
@@ -39,11 +38,9 @@ public class DeleteCustomerTaskHandler implements java.io.Serializable,  WorkIte
             con.setDoOutput(true);
             con.setInstanceFollowRedirects(false);
             con.connect();
-            InputStream inStream = con.getInputStream();
-            String json = streamToString(inStream);
             
             int responseCode = con.getResponseCode();
-		    System.out.println("\nSending 'GET' request to URL : " + url);
+		    System.out.println("\nSending 'DELETE' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
 		    
 		    // Respond

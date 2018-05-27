@@ -96,7 +96,6 @@
         "Customer" : new ObjectDataType(),
     ],
     "results" : [
-        "RegistrationCode" : new StringDataType(),
         "Customer" : new ObjectDataType(),
     ],
     "displayName" : "CreateCustomerTask",

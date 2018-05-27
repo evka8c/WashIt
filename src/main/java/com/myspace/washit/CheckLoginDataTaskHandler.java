@@ -29,7 +29,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Prepare url
-        String url = "https://washit-18577.firebaseio.com/customers.json?orderBy=\"email\"";//&equalTo=\"" + customer.getEmail() + "\"";
+        String url = "https://washit-18577.firebaseio.com/customers.json?orderBy=email";//&equalTo=\"" + customer.getEmail() + "\"";
         System.out.println("CUSTOMER DOES EXISTS!!!!" + url);
         
         // Check if user exists

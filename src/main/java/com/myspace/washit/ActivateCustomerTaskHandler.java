@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.io.IOException;
 import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
+import javax.json.Json;
+import javax.json.JsonObject;
+import java.io.DataOutputStream;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;

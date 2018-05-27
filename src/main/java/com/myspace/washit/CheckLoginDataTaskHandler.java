@@ -46,7 +46,6 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
     private static String streamToString(InputStream inputStream) 
     {
         String text = new Scanner(inputStream, "UTF-8").useDelimiter("\\Z").next();
-        
         return text;
     }
     

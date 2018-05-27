@@ -14,8 +14,7 @@ public class DeleteCustomerTaskHandler implements java.io.Serializable,  WorkIte
 {
     static final long serialVersionUID = 1L;
 
-    public DeleteCustomerTaskHandler() {
-    }
+    public DeleteCustomerTaskHandler() {}
 
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {

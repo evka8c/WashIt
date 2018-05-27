@@ -87,8 +87,7 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
             jsonReader.close();
             String firebaseId = object.getString("name");
             customer.setFirebaseId(firebaseId);
-            System.out.println(customer.getFirebaseId());
-		    
+
         } catch (Exception e){
             e.printStackTrace();
         }

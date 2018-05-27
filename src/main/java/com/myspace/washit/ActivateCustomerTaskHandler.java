@@ -22,6 +22,7 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
     {
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");
+        String registrationCode = (String) workItem.getParameter("RegistrationCode");
         
         // Prepare customer to activate url
         String url = "https://washit-18577.firebaseio.com/customers/" + customer.getFirebaseId() + "/.json";

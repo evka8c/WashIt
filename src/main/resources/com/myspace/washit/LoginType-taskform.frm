@@ -1,0 +1,1 @@
+{"id":"0a96654d-d57e-415d-87a8-00321d1c6177","name":"LoginType-taskform.frm","model":{"taskName":"LoginType","processId":"src.Login","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}

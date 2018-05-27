@@ -12,7 +12,7 @@ import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
 import org.kie.api.runtime.process.WorkItemManager;
 
-public class CheckLoginDataTaskHandler implements java.io.Serializable 
+public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItemHandler
 {
     static final long serialVersionUID = 1L;
 

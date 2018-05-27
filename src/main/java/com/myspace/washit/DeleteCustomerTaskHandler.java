@@ -3,6 +3,7 @@ package com.myspace.washit;
 import com.myspace.washit.Customer;
 import java.util.HashMap;
 import java.io.InputStream;
+import java.io.IOException;
 import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
 

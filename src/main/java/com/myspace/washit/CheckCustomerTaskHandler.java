@@ -25,7 +25,7 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");
         
-        // Do some work
+        // Check if user exists
         String json = jsonGetRequest(url);
         if (json.contains(customer.getEmail())) {
             System.out.println("EMAIL ALREADY EXISTS!!!!");

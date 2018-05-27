@@ -25,23 +25,33 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
 
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
-        String url = "https://washit-18577.firebaseio.com/customers.json";
-        
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");
         
+        // Prepare url
+        String url = 'https://washit-18577.firebaseio.com/customers.json?orderBy="email"&equalTo="' + customer.getEmail() + '"';
+        System.out.println("CUSTOMER DOES EXISTS!!!!" + url);
+        
         // Check if user exists
         String jsonString = jsonGetRequest(url);
-        if (!jsonString.contains(customer.getEmail())) {
-            System.out.println("CUSTOMER DOES NOT EXISTS!!!!");
-            throw new RuntimeException("There is no customer with filled email address in system.");
-        };
+        
+        System.out.println("CUSTOMER DOES EXISTS!!!!" + jsonString);
+        
+        
+        //if (!jsonString.contains(customer.getEmail())) {
+          //  System.out.println("CUSTOMER DOES NOT EXISTS!!!!");
+        //    throw new RuntimeException("There is no customer with filled email address in system.");
+        //};
         
         System.out.println("CUSTOMER DOES EXISTS!!!!");
         System.out.println("Email: " + customer.getEmail());
         System.out.println("Password: " + customer.getPassword());
         
-        JsonArray json = Json.createReader(new StringReader(jsonString)).readObject();
+        //JsonArray allCustomersArray = Json.createReader(new StringReader(jsonString)).readArray();
+        //for (javax.json.JsonValue jsonValue : value) {
+          //  System.out.println(jsonValue);
+        //}
+}
         
         
         // Notify manager that work item has been completed

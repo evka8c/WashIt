@@ -110,5 +110,14 @@
     "displayName" : "DeleteCustomerTask",
     "icon" : "defaultservicenodeicon.png"
   ],
+  
+  [
+    "name" : "ActivateCustomerTask",
+    "parameters" : [
+        "Customer" : new ObjectDataType(),
+    ],
+    "displayName" : "ActivateCustomerTask",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 
 ]

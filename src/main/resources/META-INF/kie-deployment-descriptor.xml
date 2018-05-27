@@ -12,6 +12,12 @@
     <work-item-handlers>
         <work-item-handler>
             <resolver>mvel</resolver>
+            <identifier>new com.myspace.washit.ActivateCustomerTaskHandler()</identifier>
+            <parameters/>
+            <name>ActivateCustomerTask</name>
+        </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
             <identifier>new org.jbpm.process.workitem.email.EmailWorkItemHandler("smtp.gmail.com","587","20bpm18@gmail.com","pv207bpm", "true")</identifier>
             <parameters/>
             <name>Email</name>

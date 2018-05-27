@@ -43,7 +43,8 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
             // Header
-            con.setRequestMethod("PATCH");
+            con.setRequestMethod("POST");
+            conn.setRequestProperty("X-HTTP-Method-Override", "PATCH");
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
             con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
             con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");

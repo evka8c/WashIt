@@ -40,6 +40,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         System.out.println("Password: " + customer.getPassword());
         
         JsonObject json = Json.createReader(new StringReader(jsonString)).readObject();
+        Iterator keys = json.keys();
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

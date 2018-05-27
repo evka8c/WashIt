@@ -76,7 +76,14 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
 		    in.close();
 		
 		    // Respond
+		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
+            JsonObject object = jsonReader.readObject();
+            jsonReader.close();
+            
+            
 		    System.out.println(response.toString());
+		    
+		    // 
 		    
         } catch (Exception e){
             e.printStackTrace();

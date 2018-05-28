@@ -1,0 +1,1 @@
+{"id":"2b969c6c-16fd-4a1b-bd88-a3d0a519b2de","name":"LaundryType-taskform.frm","model":{"taskName":"LaundryType","processId":"src.OrderCreation","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}

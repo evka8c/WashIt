@@ -97,14 +97,12 @@ opened]]></drools:metaValue>
         <bpmn2:dataInput id="_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_TaskNameInputX" drools:dtype="String" itemSubjectRef="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_TaskNameInputXItem" name="TaskName"/>
         <bpmn2:dataInput id="_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_SkippableInputX" drools:dtype="Object" itemSubjectRef="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputXItem" name="GroupId"/>
-        <bpmn2:dataOutput id="_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_orderOutputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_orderOutputXItem" name="order"/>
         <bpmn2:inputSet id="_OQtNhmKDEeiHBNO8JGZicg">
           <bpmn2:dataInputRefs>_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
         <bpmn2:outputSet id="_OQtNh2KDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_orderOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OQtNiGKDEeiHBNO8JGZicg">
@@ -128,10 +126,6 @@ opened]]></drools:metaValue>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNk2KDEeiHBNO8JGZicg">_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OQtNlGKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_52F6BDF8-23AC-4D5E-A13F-A9EC69417807_orderOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>order</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="_BB674372-3144-4EA9-AE6D-6E87F819406E" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Select laundry weight">
       <bpmn2:extensionElements>
@@ -143,19 +137,13 @@ opened]]></drools:metaValue>
       <bpmn2:outgoing>_40E11DB8-D85C-456B-8058-EE8CFBFE08A2</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_OQtNlWKDEeiHBNO8JGZicg">
         <bpmn2:dataInput id="_BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputX" drools:dtype="String" itemSubjectRef="__BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_BB674372-3144-4EA9-AE6D-6E87F819406E_orderInputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__BB674372-3144-4EA9-AE6D-6E87F819406E_orderInputXItem" name="order"/>
         <bpmn2:dataInput id="_BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputX" drools:dtype="Object" itemSubjectRef="__BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="_BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputXItem" name="GroupId"/>
-        <bpmn2:dataOutput id="_BB674372-3144-4EA9-AE6D-6E87F819406E_orderOutputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__BB674372-3144-4EA9-AE6D-6E87F819406E_orderOutputXItem" name="order"/>
         <bpmn2:inputSet id="_OQtNlmKDEeiHBNO8JGZicg">
-          <bpmn2:dataInputRefs>_BB674372-3144-4EA9-AE6D-6E87F819406E_orderInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_OQtNl2KDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_BB674372-3144-4EA9-AE6D-6E87F819406E_orderOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OQtNmGKDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputX</bpmn2:targetRef>
@@ -163,10 +151,6 @@ opened]]></drools:metaValue>
           <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNmmKDEeiHBNO8JGZicg"><![CDATA[LaundryWeight]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNm2KDEeiHBNO8JGZicg">_BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_OQtNnGKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>order</bpmn2:sourceRef>
-        <bpmn2:targetRef>_BB674372-3144-4EA9-AE6D-6E87F819406E_orderInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_OQtNnWKDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputX</bpmn2:targetRef>
@@ -182,10 +166,6 @@ opened]]></drools:metaValue>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNpGKDEeiHBNO8JGZicg">_BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OQtNpWKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_BB674372-3144-4EA9-AE6D-6E87F819406E_orderOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>order</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:endEvent id="_0C64D667-A0C5-4571-B081-82BD69779C78" drools:selectable="true" color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" name="Order created">
       <bpmn2:extensionElements>
@@ -206,19 +186,13 @@ created]]></drools:metaValue>
       <bpmn2:outgoing>_75080EA0-FFAA-4BC2-9F67-A7AFFBCA9892</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_OQtNpmKDEeiHBNO8JGZicg">
         <bpmn2:dataInput id="_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputX" drools:dtype="String" itemSubjectRef="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderInputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderInputXItem" name="order"/>
         <bpmn2:dataInput id="_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_SkippableInputX" drools:dtype="Object" itemSubjectRef="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_GroupIdInputXItem" name="GroupId"/>
-        <bpmn2:dataOutput id="_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderOutputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderOutputXItem" name="order"/>
         <bpmn2:inputSet id="_OQtNp2KDEeiHBNO8JGZicg">
-          <bpmn2:dataInputRefs>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_OQtNqGKDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OQtNqWKDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputX</bpmn2:targetRef>
@@ -226,10 +200,6 @@ created]]></drools:metaValue>
           <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNq2KDEeiHBNO8JGZicg"><![CDATA[PickupDeliveryTime]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNrGKDEeiHBNO8JGZicg">_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_OQtNrWKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>order</bpmn2:sourceRef>
-        <bpmn2:targetRef>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_OQtNrmKDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_GroupIdInputX</bpmn2:targetRef>
@@ -245,10 +215,6 @@ created]]></drools:metaValue>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNtWKDEeiHBNO8JGZicg">_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OQtNtmKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>order</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Select additional services">
       <bpmn2:extensionElements>
@@ -260,19 +226,13 @@ created]]></drools:metaValue>
       <bpmn2:outgoing>_904ABD83-F8A9-4FEA-8033-EA03DEF116D3</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_OQtNt2KDEeiHBNO8JGZicg">
         <bpmn2:dataInput id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_TaskNameInputX" drools:dtype="String" itemSubjectRef="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderInputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderInputXItem" name="order"/>
         <bpmn2:dataInput id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_SkippableInputX" drools:dtype="Object" itemSubjectRef="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputXItem" name="GroupId"/>
-        <bpmn2:dataOutput id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderOutputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderOutputXItem" name="order"/>
         <bpmn2:inputSet id="_OQtNuGKDEeiHBNO8JGZicg">
-          <bpmn2:dataInputRefs>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_OQtNuWKDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OQtNumKDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_TaskNameInputX</bpmn2:targetRef>
@@ -280,10 +240,6 @@ created]]></drools:metaValue>
           <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNvGKDEeiHBNO8JGZicg"><![CDATA[AdditionalServices]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNvWKDEeiHBNO8JGZicg">_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_OQtNvmKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>order</bpmn2:sourceRef>
-        <bpmn2:targetRef>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_OQtNv2KDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputX</bpmn2:targetRef>
@@ -299,10 +255,6 @@ created]]></drools:metaValue>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNxmKDEeiHBNO8JGZicg">_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OQtNx2KDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>order</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="_78040DC6-C5E2-4119-8790-13AF22F37E63" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Choose laundry program">
       <bpmn2:extensionElements>
@@ -314,19 +266,13 @@ created]]></drools:metaValue>
       <bpmn2:outgoing>_3DE72D65-73F0-4435-9123-97276FA4EB6F</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_OQtNyGKDEeiHBNO8JGZicg">
         <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX" drools:dtype="String" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_orderInputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_orderInputXItem" name="order"/>
         <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputX" drools:dtype="Object" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputXItem" name="Skippable"/>
         <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputXItem" name="GroupId"/>
-        <bpmn2:dataOutput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_orderOutputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_orderOutputXItem" name="order"/>
         <bpmn2:inputSet id="_OQtNyWKDEeiHBNO8JGZicg">
-          <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_orderInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
-        <bpmn2:outputSet id="_OQtNymKDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_orderOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
       </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OQtNy2KDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX</bpmn2:targetRef>
@@ -334,10 +280,6 @@ created]]></drools:metaValue>
           <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNzWKDEeiHBNO8JGZicg"><![CDATA[LaundryProgram]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNzmKDEeiHBNO8JGZicg">_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_OQtNz2KDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>order</bpmn2:sourceRef>
-        <bpmn2:targetRef>_78040DC6-C5E2-4119-8790-13AF22F37E63_orderInputX</bpmn2:targetRef>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_OQtN0GKDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputX</bpmn2:targetRef>
@@ -353,10 +295,6 @@ created]]></drools:metaValue>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtN12KDEeiHBNO8JGZicg">_78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OQtN2GKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_78040DC6-C5E2-4119-8790-13AF22F37E63_orderOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>order</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:userTask>
     <bpmn2:task id="_0E65F8AA-4AEA-476C-B22B-065B28A997C9" drools:selectable="true" drools:taskName="PriceEstimationTask" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Do price estimation">
       <bpmn2:extensionElements>
@@ -368,15 +306,11 @@ created]]></drools:metaValue>
       <bpmn2:outgoing>_400CD74D-1F97-4D5E-8601-785FE5A7CFB1</bpmn2:outgoing>
       <bpmn2:ioSpecification id="_OQtN2WKDEeiHBNO8JGZicg">
         <bpmn2:dataInput id="_0E65F8AA-4AEA-476C-B22B-065B28A997C9_TaskNameInputX" drools:dtype="String" itemSubjectRef="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderInputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderInputXItem" name="Order"/>
-        <bpmn2:dataOutput id="_0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderOutputX" drools:dtype="com.myspace.washit.Order" itemSubjectRef="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderOutputXItem" name="Order"/>
         <bpmn2:dataOutput id="_0E65F8AA-4AEA-476C-B22B-065B28A997C9_DepositOutputX" drools:dtype="String" itemSubjectRef="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_DepositOutputXItem" name="Deposit"/>
         <bpmn2:inputSet id="_OQtN2mKDEeiHBNO8JGZicg">
-          <bpmn2:dataInputRefs>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderInputX</bpmn2:dataInputRefs>
           <bpmn2:dataInputRefs>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_TaskNameInputX</bpmn2:dataInputRefs>
         </bpmn2:inputSet>
         <bpmn2:outputSet id="_OQtN22KDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderOutputX</bpmn2:dataOutputRefs>
           <bpmn2:dataOutputRefs>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_DepositOutputX</bpmn2:dataOutputRefs>
         </bpmn2:outputSet>
       </bpmn2:ioSpecification>
@@ -387,14 +321,6 @@ created]]></drools:metaValue>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtN32KDEeiHBNO8JGZicg">_0E65F8AA-4AEA-476C-B22B-065B28A997C9_TaskNameInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_OQtN4GKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>order</bpmn2:sourceRef>
-        <bpmn2:targetRef>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderInputX</bpmn2:targetRef>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataOutputAssociation id="_OQtN4WKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>order</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
       <bpmn2:dataOutputAssociation id="_OQtN4mKDEeiHBNO8JGZicg">
         <bpmn2:sourceRef>_0E65F8AA-4AEA-476C-B22B-065B28A997C9_DepositOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>deposit</bpmn2:targetRef>

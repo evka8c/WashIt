@@ -2,7 +2,6 @@
 <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_OQtNgGKDEeiHBNO8JGZicg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_customerItem" structureRef="com.myspace.washit.Customer"/>
   <bpmn2:itemDefinition id="_depositItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__01EAAD8B-0F86-46C3-9D65-6CF6C10FC74E_CustomerOutputXItem" structureRef="com.myspace.washit.Customer"/>
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputXItem" structureRef="Object"/>
@@ -68,10 +67,6 @@ opened]]></drools:metaValue>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_4E04A9FD-59AC-4A0A-BC0A-DD96B0BA4779</bpmn2:incoming>
       <bpmn2:outgoing>_16665ABB-0DB3-4939-97A3-A016EA3BD693</bpmn2:outgoing>
-      <bpmn2:dataOutputAssociation id="_OQtNhGKDEeiHBNO8JGZicg">
-        <bpmn2:sourceRef>_01EAAD8B-0F86-46C3-9D65-6CF6C10FC74E_CustomerOutputX</bpmn2:sourceRef>
-        <bpmn2:targetRef>customer</bpmn2:targetRef>
-      </bpmn2:dataOutputAssociation>
     </bpmn2:callActivity>
     <bpmn2:userTask id="_52F6BDF8-23AC-4D5E-A13F-A9EC69417807" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Choose laundry type">
       <bpmn2:extensionElements>

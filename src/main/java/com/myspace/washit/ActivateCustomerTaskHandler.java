@@ -27,7 +27,7 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
         // Check registration code
         if (!customer.getRegistrationCode().equals(registrationCode)) 
         {
-            System.out.println("INVALID REGISTRATION CODE!!!!");
+            System.out.println("INVALID REGISTRATION CODE!!!");
             throw new RuntimeException("The entered registration code is invalid.");
         };
         
@@ -65,6 +65,8 @@ public class ActivateCustomerTaskHandler implements java.io.Serializable,  WorkI
         }   catch (IOException ex) {
             ex.printStackTrace();
         }
+        
+        System.out.println("CUSTOMER ACTIVATED!!!");
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

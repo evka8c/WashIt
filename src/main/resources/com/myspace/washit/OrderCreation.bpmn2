@@ -8,7 +8,6 @@
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_GroupIdInputXItem" structureRef="Object"/>
@@ -133,13 +132,6 @@ opened]]></drools:metaValue>
         <bpmn2:assignment id="_OQtNmWKDEeiHBNO8JGZicg">
           <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNmmKDEeiHBNO8JGZicg"><![CDATA[LaundryWeight]]></bpmn2:from>
           <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNm2KDEeiHBNO8JGZicg">_BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputX</bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
-      <bpmn2:dataInputAssociation id="_OQtNnWKDEeiHBNO8JGZicg">
-        <bpmn2:targetRef>_BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_OQtNnmKDEeiHBNO8JGZicg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNn2KDEeiHBNO8JGZicg"><![CDATA[users]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNoGKDEeiHBNO8JGZicg">_BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputX</bpmn2:to>
         </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_OQtNoWKDEeiHBNO8JGZicg">

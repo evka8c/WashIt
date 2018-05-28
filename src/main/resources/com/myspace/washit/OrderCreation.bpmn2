@@ -197,11 +197,6 @@ created]]></drools:metaValue>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_3DE72D65-73F0-4435-9123-97276FA4EB6F</bpmn2:incoming>
       <bpmn2:outgoing>_904ABD83-F8A9-4FEA-8033-EA03DEF116D3</bpmn2:outgoing>
-      <bpmn2:dataInputAssociation id="_OQtNumKDEeiHBNO8JGZicg">
-        <bpmn2:assignment id="_OQtNu2KDEeiHBNO8JGZicg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNvGKDEeiHBNO8JGZicg"><![CDATA[AdditionalServices]]></bpmn2:from>
-        </bpmn2:assignment>
-      </bpmn2:dataInputAssociation>
       <bpmn2:dataInputAssociation id="_OQtNv2KDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_OQtNwGKDEeiHBNO8JGZicg">

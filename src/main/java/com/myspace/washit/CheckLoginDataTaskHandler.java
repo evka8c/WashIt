@@ -37,7 +37,9 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             throw new RuntimeException("There is no customer with filled email address in system.");
         };
         
+        System.out.println("AAA: " + jsonString);
         JsonArray customerArray = Json.createReader(new StringReader(jsonString)).readArray();
+        System.out.println("AAA: " + customerArray);
         for (JsonValue jsonValue : customerArray) {
             System.out.println(jsonValue);
         }

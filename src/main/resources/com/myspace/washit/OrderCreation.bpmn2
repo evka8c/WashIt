@@ -74,12 +74,6 @@ opened]]></drools:metaValue>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_4E04A9FD-59AC-4A0A-BC0A-DD96B0BA4779</bpmn2:incoming>
       <bpmn2:outgoing>_16665ABB-0DB3-4939-97A3-A016EA3BD693</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_OQtNgmKDEeiHBNO8JGZicg">
-        <bpmn2:dataOutput id="_01EAAD8B-0F86-46C3-9D65-6CF6C10FC74E_CustomerOutputX" drools:dtype="com.myspace.washit.Customer" itemSubjectRef="__01EAAD8B-0F86-46C3-9D65-6CF6C10FC74E_CustomerOutputXItem" name="Customer"/>
-        <bpmn2:outputSet id="_OQtNg2KDEeiHBNO8JGZicg">
-          <bpmn2:dataOutputRefs>_01EAAD8B-0F86-46C3-9D65-6CF6C10FC74E_CustomerOutputX</bpmn2:dataOutputRefs>
-        </bpmn2:outputSet>
-      </bpmn2:ioSpecification>
       <bpmn2:dataOutputAssociation id="_OQtNhGKDEeiHBNO8JGZicg">
         <bpmn2:sourceRef>_01EAAD8B-0F86-46C3-9D65-6CF6C10FC74E_CustomerOutputX</bpmn2:sourceRef>
         <bpmn2:targetRef>customer</bpmn2:targetRef>

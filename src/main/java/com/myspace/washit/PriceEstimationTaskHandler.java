@@ -16,9 +16,10 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
         // Extract parameters
-        Order order = (Order) workItem.getParameter("Order");
+        //Order order = (Order) workItem.getParameter("Order");
+        Customer customer = (Customer) workItem.getParameter("Order");
         
-        System.out.println("DATA OK!!!: " + order);
+        System.out.println("DATA OK!!!: " + customer);
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

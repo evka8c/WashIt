@@ -46,6 +46,8 @@ public class DeleteCustomerTaskHandler implements java.io.Serializable,  WorkIte
             ex.printStackTrace();
         }
         
+        System.out.println("DATA DELETED!!!");
+        
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
     }

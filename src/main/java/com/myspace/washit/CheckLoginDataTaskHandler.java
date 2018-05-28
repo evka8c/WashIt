@@ -75,6 +75,8 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         System.out.println("LOGIN SUCCEEDED!!!");
         
         // Notify manager that work item has been completed
+        Map<String,Object> result = new HashMap<String,Object>();
+        result.put("Customer", customer);
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
     }
     

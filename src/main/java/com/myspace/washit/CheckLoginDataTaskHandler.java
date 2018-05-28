@@ -57,7 +57,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             System.out.println("CUSTOMER IS NOT ACIVATED!!!");
             throw new RuntimeException("Customer is not activated.");
         }
-        customer.setActivated = activated;
+        customer.setActivated(activated);
         
         // Check password
         String password = customerJson.getString("password");

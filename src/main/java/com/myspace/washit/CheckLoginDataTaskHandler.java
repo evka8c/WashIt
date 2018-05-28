@@ -51,7 +51,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         }
         
         // Check if customer is activated
-        Boolean activated = customerJson.getBoolean("activated")
+        Boolean activated = customerJson.getBoolean("activated");
         if (!activated)
         {
             System.out.println("CUSTOMER IS NOT ACIVATED!!!");

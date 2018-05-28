@@ -40,16 +40,13 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         JsonReader jsonReader = Json.createReader(new StringReader(jsonString));
         JsonObject json = jsonReader.readObject();
         jsonReader.close();
-        for (Entry<String, JsonValue> jv : json.entrySet()) {
-		    jbf.add(jv.getKey(), jv.getValue());
-	    }
-	    
+        JsonObject customerJson = null;
 	    for (Object e : json.entrySet()) 
 	    {
             Map.Entry entry = (Map.Entry) e;
-            String.entry.getValue()
-            JsonValue value = entry.getValue();
+            customerJson = (JsonObject) entry.getValue();
         }
+        System.out.println("Response Code : " + customerJson);
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

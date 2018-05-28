@@ -130,5 +130,18 @@
     "displayName" : "CheckLoginDataTask",
     "icon" : "defaultservicenodeicon.png"
   ],
-
+  
+  [
+    "name" : "PriceEstimationTask",
+    "parameters" : [
+        "Order" : new ObjectDataType(),
+    ],
+    "results" : [
+        "Order" : new ObjectDataType(),
+        "Deposit" : new StringDataType(),
+    ],
+    "displayName" : "PriceEstimationTask",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  
 ]

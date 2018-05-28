@@ -23,7 +23,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         System.out.println("DATA OK!!!: " + customer.getLastName());
         System.out.println("DATA OK!!!: " + customer.getEmail());
         System.out.println("DATA OK!!!: " + customer.getPassword());
-        System.out.println("DATA OK!!!: " + customer.getAddredd());
+        System.out.println("DATA OK!!!: " + customer.getAddress());
         System.out.println("DATA OK!!!: " + customer.getActivated());
         
         // Notify manager that work item has been completed

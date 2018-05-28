@@ -46,6 +46,12 @@
             <parameters/>
             <name>CheckCustomerTask</name>
         </work-item-handler>
+        <work-item-handler>
+            <resolver>mvel</resolver>
+            <identifier>new com.myspace.washit.PriceEstimationTaskHandler()</identifier>
+            <parameters/>
+            <name>PriceEstimationTask</name>
+        </work-item-handler>
     </work-item-handlers>
     <environment-entries/>
     <configurations/>

@@ -8,8 +8,62 @@ public class Order implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Shirts")
+	@org.kie.api.definition.type.Label("Shirts")
 	private java.lang.Boolean shirts;
+
+	@org.kie.api.definition.type.Label(value = "Blouses")
+	private java.lang.Boolean blouses;
+
+	@org.kie.api.definition.type.Label(value = "T-Shirts")
+	private java.lang.Boolean tShirts;
+
+	@org.kie.api.definition.type.Label(value = "Jeans")
+	private java.lang.Boolean jeans;
+
+	@org.kie.api.definition.type.Label(value = "Shorts")
+	private java.lang.Boolean shorts;
+
+	@org.kie.api.definition.type.Label(value = "Jumpers")
+	private java.lang.Boolean jumpers;
+
+	@org.kie.api.definition.type.Label(value = "Estimated Weight")
+	private java.lang.Double estimatedWeight;
+
+	@org.kie.api.definition.type.Label(value = "Real Weight")
+	private java.lang.Double realWeight;
+
+	@org.kie.api.definition.type.Label(value = "Laundry Program")
+	private java.lang.String laundryProgram;
+
+	@org.kie.api.definition.type.Label(value = "Ironing")
+	private java.lang.Boolean ironing;
+
+	@org.kie.api.definition.type.Label(value = "Add Clothes Hangers")
+	private java.lang.Boolean addClothesHangers;
+
+	@org.kie.api.definition.type.Label(value = "Pick up Date")
+	private java.util.Date pickUpDate;
+
+	@org.kie.api.definition.type.Label(value = "Delivery Date")
+	private java.util.Date deliveryDate;
+
+	@org.kie.api.definition.type.Label(value = "Estimated Price")
+	private java.lang.Double estimatedPrice;
+
+	@org.kie.api.definition.type.Label(value = "Real Price")
+	private java.lang.Double realPrice;
+
+	@org.kie.api.definition.type.Label(value = "Deposit Paid")
+	private java.lang.Boolean depositPaid;
+
+	@org.kie.api.definition.type.Label(value = "Order Paid")
+	private java.lang.Boolean orderPaid;
+
+	@org.kie.api.definition.type.Label(value = "Picked up")
+	private java.lang.Boolean pickedUp;
+
+	@org.kie.api.definition.type.Label(value = "Delivered")
+	private java.lang.Boolean delivered;
 
 	public Order() {
 	}
@@ -22,8 +76,179 @@ public class Order implements java.io.Serializable {
 		this.shirts = shirts;
 	}
 
-	public Order(java.lang.Boolean shirts) {
+	public java.lang.Boolean getBlouses() {
+		return this.blouses;
+	}
+
+	public void setBlouses(java.lang.Boolean blouses) {
+		this.blouses = blouses;
+	}
+
+	public java.lang.Boolean gettShirts() {
+		return this.tShirts;
+	}
+
+	public void settShirts(java.lang.Boolean tShirts) {
+		this.tShirts = tShirts;
+	}
+
+	public java.lang.Boolean getJeans() {
+		return this.jeans;
+	}
+
+	public void setJeans(java.lang.Boolean jeans) {
+		this.jeans = jeans;
+	}
+
+	public java.lang.Boolean getShorts() {
+		return this.shorts;
+	}
+
+	public void setShorts(java.lang.Boolean shorts) {
+		this.shorts = shorts;
+	}
+
+	public java.lang.Boolean getJumpers() {
+		return this.jumpers;
+	}
+
+	public void setJumpers(java.lang.Boolean jumpers) {
+		this.jumpers = jumpers;
+	}
+
+	public java.lang.Double getEstimatedWeight() {
+		return this.estimatedWeight;
+	}
+
+	public void setEstimatedWeight(java.lang.Double estimatedWeight) {
+		this.estimatedWeight = estimatedWeight;
+	}
+
+	public java.lang.Double getRealWeight() {
+		return this.realWeight;
+	}
+
+	public void setRealWeight(java.lang.Double realWeight) {
+		this.realWeight = realWeight;
+	}
+
+	public java.lang.String getLaundryProgram() {
+		return this.laundryProgram;
+	}
+
+	public void setLaundryProgram(java.lang.String laundryProgram) {
+		this.laundryProgram = laundryProgram;
+	}
+
+	public java.lang.Boolean getIroning() {
+		return this.ironing;
+	}
+
+	public void setIroning(java.lang.Boolean ironing) {
+		this.ironing = ironing;
+	}
+
+	public java.lang.Boolean getAddClothesHangers() {
+		return this.addClothesHangers;
+	}
+
+	public void setAddClothesHangers(java.lang.Boolean addClothesHangers) {
+		this.addClothesHangers = addClothesHangers;
+	}
+
+	public java.util.Date getPickUpDate() {
+		return this.pickUpDate;
+	}
+
+	public void setPickUpDate(java.util.Date pickUpDate) {
+		this.pickUpDate = pickUpDate;
+	}
+
+	public java.util.Date getDeliveryDate() {
+		return this.deliveryDate;
+	}
+
+	public void setDeliveryDate(java.util.Date deliveryDate) {
+		this.deliveryDate = deliveryDate;
+	}
+
+	public java.lang.Double getEstimatedPrice() {
+		return this.estimatedPrice;
+	}
+
+	public void setEstimatedPrice(java.lang.Double estimatedPrice) {
+		this.estimatedPrice = estimatedPrice;
+	}
+
+	public java.lang.Double getRealPrice() {
+		return this.realPrice;
+	}
+
+	public void setRealPrice(java.lang.Double realPrice) {
+		this.realPrice = realPrice;
+	}
+
+	public java.lang.Boolean getDepositPaid() {
+		return this.depositPaid;
+	}
+
+	public void setDepositPaid(java.lang.Boolean depositPaid) {
+		this.depositPaid = depositPaid;
+	}
+
+	public java.lang.Boolean getOrderPaid() {
+		return this.orderPaid;
+	}
+
+	public void setOrderPaid(java.lang.Boolean orderPaid) {
+		this.orderPaid = orderPaid;
+	}
+
+	public java.lang.Boolean getPickedUp() {
+		return this.pickedUp;
+	}
+
+	public void setPickedUp(java.lang.Boolean pickedUp) {
+		this.pickedUp = pickedUp;
+	}
+
+	public java.lang.Boolean getDelivered() {
+		return this.delivered;
+	}
+
+	public void setDelivered(java.lang.Boolean delivered) {
+		this.delivered = delivered;
+	}
+
+	public Order(java.lang.Boolean shirts, java.lang.Boolean blouses,
+			java.lang.Boolean tShirts, java.lang.Boolean jeans,
+			java.lang.Boolean shorts, java.lang.Boolean jumpers,
+			java.lang.Double estimatedWeight, java.lang.Double realWeight,
+			java.lang.String laundryProgram, java.lang.Boolean ironing,
+			java.lang.Boolean addClothesHangers, java.util.Date pickUpDate,
+			java.util.Date deliveryDate, java.lang.Double estimatedPrice,
+			java.lang.Double realPrice, java.lang.Boolean depositPaid,
+			java.lang.Boolean orderPaid, java.lang.Boolean pickedUp,
+			java.lang.Boolean delivered) {
 		this.shirts = shirts;
+		this.blouses = blouses;
+		this.tShirts = tShirts;
+		this.jeans = jeans;
+		this.shorts = shorts;
+		this.jumpers = jumpers;
+		this.estimatedWeight = estimatedWeight;
+		this.realWeight = realWeight;
+		this.laundryProgram = laundryProgram;
+		this.ironing = ironing;
+		this.addClothesHangers = addClothesHangers;
+		this.pickUpDate = pickUpDate;
+		this.deliveryDate = deliveryDate;
+		this.estimatedPrice = estimatedPrice;
+		this.realPrice = realPrice;
+		this.depositPaid = depositPaid;
+		this.orderPaid = orderPaid;
+		this.pickedUp = pickedUp;
+		this.delivered = delivered;
 	}
 
 }

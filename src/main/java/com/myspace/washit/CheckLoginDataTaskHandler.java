@@ -11,7 +11,6 @@ import java.util.Scanner;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonValue;
-import java.util.Iterator;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;

@@ -11,59 +11,62 @@ public class Order implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Shirts")
 	private java.lang.Boolean shirts;
 
-	@org.kie.api.definition.type.Label(value = "Blouses")
+	@org.kie.api.definition.type.Label("Blouses")
 	private java.lang.Boolean blouses;
 
-	@org.kie.api.definition.type.Label(value = "T-Shirts")
+	@org.kie.api.definition.type.Label("T-Shirts")
 	private java.lang.Boolean tShirts;
 
-	@org.kie.api.definition.type.Label(value = "Jeans")
+	@org.kie.api.definition.type.Label("Jeans")
 	private java.lang.Boolean jeans;
 
-	@org.kie.api.definition.type.Label(value = "Shorts")
+	@org.kie.api.definition.type.Label("Shorts")
 	private java.lang.Boolean shorts;
 
-	@org.kie.api.definition.type.Label(value = "Jumpers")
+	@org.kie.api.definition.type.Label("Jumpers")
 	private java.lang.Boolean jumpers;
 
-	@org.kie.api.definition.type.Label(value = "Estimated Weight")
+	@org.kie.api.definition.type.Label("Estimated Weight")
 	private java.lang.Double estimatedWeight;
 
-	@org.kie.api.definition.type.Label(value = "Real Weight")
+	@org.kie.api.definition.type.Label("Real Weight")
 	private java.lang.Double realWeight;
 
-	@org.kie.api.definition.type.Label(value = "Laundry Program")
+	@org.kie.api.definition.type.Label("Laundry Program")
 	private java.lang.String laundryProgram;
 
-	@org.kie.api.definition.type.Label(value = "Ironing")
+	@org.kie.api.definition.type.Label("Ironing")
 	private java.lang.Boolean ironing;
 
-	@org.kie.api.definition.type.Label(value = "Add Clothes Hangers")
+	@org.kie.api.definition.type.Label("Add Clothes Hangers")
 	private java.lang.Boolean addClothesHangers;
 
-	@org.kie.api.definition.type.Label(value = "Pick up Date")
+	@org.kie.api.definition.type.Label("Pick up Date")
 	private java.util.Date pickUpDate;
 
-	@org.kie.api.definition.type.Label(value = "Delivery Date")
+	@org.kie.api.definition.type.Label("Delivery Date")
 	private java.util.Date deliveryDate;
 
-	@org.kie.api.definition.type.Label(value = "Estimated Price")
+	@org.kie.api.definition.type.Label("Estimated Price")
 	private java.lang.Double estimatedPrice;
 
-	@org.kie.api.definition.type.Label(value = "Real Price")
+	@org.kie.api.definition.type.Label("Real Price")
 	private java.lang.Double realPrice;
 
-	@org.kie.api.definition.type.Label(value = "Deposit Paid")
+	@org.kie.api.definition.type.Label("Deposit Paid")
 	private java.lang.Boolean depositPaid;
 
-	@org.kie.api.definition.type.Label(value = "Order Paid")
+	@org.kie.api.definition.type.Label("Order Paid")
 	private java.lang.Boolean orderPaid;
 
-	@org.kie.api.definition.type.Label(value = "Picked up")
+	@org.kie.api.definition.type.Label("Picked up")
 	private java.lang.Boolean pickedUp;
 
-	@org.kie.api.definition.type.Label(value = "Delivered")
+	@org.kie.api.definition.type.Label("Delivered")
 	private java.lang.Boolean delivered;
+
+	@org.kie.api.definition.type.Label(value = "Firebase ID")
+	private java.lang.String firebaseId;
 
 	public Order() {
 	}
@@ -220,6 +223,14 @@ public class Order implements java.io.Serializable {
 		this.delivered = delivered;
 	}
 
+	public java.lang.String getFirebaseId() {
+		return this.firebaseId;
+	}
+
+	public void setFirebaseId(java.lang.String firebaseId) {
+		this.firebaseId = firebaseId;
+	}
+
 	public Order(java.lang.Boolean shirts, java.lang.Boolean blouses,
 			java.lang.Boolean tShirts, java.lang.Boolean jeans,
 			java.lang.Boolean shorts, java.lang.Boolean jumpers,
@@ -229,7 +240,7 @@ public class Order implements java.io.Serializable {
 			java.util.Date deliveryDate, java.lang.Double estimatedPrice,
 			java.lang.Double realPrice, java.lang.Boolean depositPaid,
 			java.lang.Boolean orderPaid, java.lang.Boolean pickedUp,
-			java.lang.Boolean delivered) {
+			java.lang.Boolean delivered, java.lang.String firebaseId) {
 		this.shirts = shirts;
 		this.blouses = blouses;
 		this.tShirts = tShirts;
@@ -249,6 +260,7 @@ public class Order implements java.io.Serializable {
 		this.orderPaid = orderPaid;
 		this.pickedUp = pickedUp;
 		this.delivered = delivered;
+		this.firebaseId = firebaseId;
 	}
 
 }

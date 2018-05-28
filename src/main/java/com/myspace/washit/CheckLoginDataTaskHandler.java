@@ -41,7 +41,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         };
         
         JsonArray customerArray = Json.createReader(new StringReader(jsonString)).readArray();
-        for (jsonValue : customerArray) {
+        for (JsonValue jsonValue : customerArray) {
             System.out.println(jsonValue);
         }
         

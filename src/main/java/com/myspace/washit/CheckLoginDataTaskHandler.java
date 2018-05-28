@@ -9,7 +9,7 @@ import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 import javax.json.Json;
-import javax.json.JsonValue;
+import javax.json.JsonObject;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -36,12 +36,13 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             throw new RuntimeException("There is no customer with filled email address in system.");
         };
         
-        JsonValue customerJson = Json.createReader(new StringReader(jsonString)).readArray();
-        System.out.println("AAA: " + customerArray);
-        for (JsonValue jsonValue : customerArray) {
-            System.out.println(jsonValue);
-        }
-        
+        // Get customer data json
+        JsonReader jsonReader = Json.createReader(new StringReader(jsonString));
+        JsonObject json = jsonReader.readObject();
+        jsonReader.close();
+        for (Entry<String, JsonValue> jv : json.entrySet()) {
+		    jbf.add(jv.getKey(), jv.getValue());
+	    }
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

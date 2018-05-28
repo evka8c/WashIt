@@ -34,7 +34,7 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
             throw new RuntimeException("There is already a customer with filled email address.");
         };
         
-        System.out.println("CUSTOMER DATA OK!!!");
+        System.out.println("DATA OK!!!");
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

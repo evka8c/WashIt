@@ -6,12 +6,24 @@ package com.myspace.washit;
 
 public class Order implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Order() {
-    }
+	@org.kie.api.definition.type.Label(value = "Shirts")
+	private java.lang.Boolean shirts;
 
+	public Order() {
+	}
 
+	public java.lang.Boolean getShirts() {
+		return this.shirts;
+	}
 
+	public void setShirts(java.lang.Boolean shirts) {
+		this.shirts = shirts;
+	}
+
+	public Order(java.lang.Boolean shirts) {
+		this.shirts = shirts;
+	}
 
 }

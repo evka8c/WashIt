@@ -65,7 +65,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             throw new RuntimeException("Invalid password.");
         }
         
-        System.out.println("LOGIN SUCCEEDED!!!"");
+        System.out.println("LOGIN SUCCEEDED!!!");
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

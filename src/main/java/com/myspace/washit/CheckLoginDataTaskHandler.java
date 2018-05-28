@@ -43,6 +43,13 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         for (Entry<String, JsonValue> jv : json.entrySet()) {
 		    jbf.add(jv.getKey(), jv.getValue());
 	    }
+	    
+	    for (Object e : json.entrySet()) 
+	    {
+            Map.Entry entry = (Map.Entry) e;
+            String.entry.getValue()
+            JsonValue value = entry.getValue();
+        }
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

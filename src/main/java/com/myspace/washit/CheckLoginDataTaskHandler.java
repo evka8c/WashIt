@@ -29,8 +29,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         
         // Prepare url
         String url = "https://washit-18577.firebaseio.com/customers.json?orderBy=\"email\"&equalTo=\"" + customer.getEmail() + "\"";
-        System.out.println("CUSTOMER DOES EXISTS!!!!" + url);
-        
+
         // Check if user exists
         String jsonString = jsonGetRequest(url);
         if (!jsonString.contains(customer.getEmail())) {
@@ -38,7 +37,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             throw new RuntimeException("There is no customer with filled email address in system.");
         };
         
-        JsonArray customerArray = Json.createReader(new StringReader(jsonString)).readArray();
+        JsonArray customerArray = Json.createReader(new StringReader(jsonString)).readArray().build();
         for (JsonValue jsonValue : customerArray) {
             System.out.println(jsonValue);
         }

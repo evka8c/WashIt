@@ -58,7 +58,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         }
         
         // Check password
-        String password = object.getString("password");
+        String password = customerJson.getString("password");
         if (!password.equals(customer.getPassword())) 
         {
             System.out.println("INVALID PASSWORD!!!");

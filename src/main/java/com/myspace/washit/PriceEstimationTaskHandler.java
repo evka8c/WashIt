@@ -30,11 +30,14 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         System.out.println("ADD CLOTHES HANGERS?: " + order.getAddClothesHangers());
         System.out.println("PICK UP DATE?: " + order.getPickUpDate());
         System.out.println("DELIVERY DATE?: " + order.getDeliveryDate());
-
-
+        
+        String deposit = "10000";
         
         // Notify manager that work item has been completed
-        manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
+        Map<String,Object> result = new HashMap<String,Object>();
+        result.put("Deposit", deposit);
+        result.put("Order", order);
+        manager.completeWorkItem(workItem.getId(), result);
     }
     
     public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}

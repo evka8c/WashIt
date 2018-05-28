@@ -53,7 +53,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         // Check if customer is activated
         if (!object.getBoolean("activated") 
         {
-            System.out.println("CUSTOMER IS NOT ACIVATED!!!!");
+            System.out.println("CUSTOMER IS NOT ACIVATED!!!");
             throw new RuntimeException("Customer is not activated.");
         }
         
@@ -61,9 +61,11 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         String password = object.getString("password");
         if (!password.equals(customer.getPassword())) 
         {
-            System.out.println("INVALID PASSWORD!!!!");
+            System.out.println("INVALID PASSWORD!!!");
             throw new RuntimeException("Invalid password.");
         }
+        
+        System.out.println("LOGIN SUCCEEDED!!!"");
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
@@ -100,9 +102,6 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
-		    
-		    // Respond
-		    System.out.println(json);
 		    
         }   catch (IOException ex) {
             ex.printStackTrace();

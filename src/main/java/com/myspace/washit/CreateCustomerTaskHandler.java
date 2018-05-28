@@ -77,9 +77,6 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
 			    response.append(inputLine);
 		    }
 		    in.close();
-		
-		    // Respond
-		    System.out.println(response.toString());
 		    
 		    // Store Firebase Id
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
@@ -91,6 +88,8 @@ public class CreateCustomerTaskHandler implements java.io.Serializable, WorkItem
         } catch (Exception e){
             e.printStackTrace();
         }
+
+        System.out.println("CUSTOMER CREATED!!!");
 
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();

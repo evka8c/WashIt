@@ -127,6 +127,9 @@
     "parameters" : [
         "Customer" : new ObjectDataType(),
     ],
+    "results" : [
+        "Customer" : new ObjectDataType(),
+    ],
     "displayName" : "CheckLoginDataTask",
     "icon" : "defaultservicenodeicon.png"
   ],

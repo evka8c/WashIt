@@ -20,17 +20,21 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
     
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
-        String url = "https://washit-18577.firebaseio.com/customers.json";
-        
         // Extract parameters
         Customer customer = (Customer) workItem.getParameter("Customer");
         
+        // Prepare url for email
+        String url = "https://washit-18577.firebaseio.com/customers.json?orderBy=\"email\"&equalTo=\"" + customer.getEmail() + "\"";
+        
         // Check if customer exists
         String json = jsonGetRequest(url);
-        if (json.contains(customer.getEmail())) {
-            System.out.println("EMAIL ALREADY EXISTS!!!!");
+        if (json.contains(customer.getEmail())) 
+        {
+            System.out.println("EMAIL ALREADY EXISTS!!!");
             throw new RuntimeException("There is already a customer with filled email address.");
         };
+        
+        System.out.println("CUSTOMER DATA OK!!!");
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
@@ -67,9 +71,6 @@ public class CheckCustomerTaskHandler implements java.io.Serializable, WorkItemH
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
-		    
-		    // Respond
-		    System.out.println(json);
 		    
         }   catch (IOException ex) {
             ex.printStackTrace();

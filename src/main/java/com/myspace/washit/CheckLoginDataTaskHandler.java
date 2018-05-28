@@ -33,7 +33,8 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
 
         // Check if user exists
         String jsonString = jsonGetRequest(url);
-        if (!jsonString.contains(customer.getEmail())) {
+        if (!jsonString.contains(customer.getEmail())) 
+        {
             System.out.println("CUSTOMER DOES NOT EXISTS!!!!");
             throw new RuntimeException("There is no customer with filled email address in system.");
         };
@@ -48,7 +49,21 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
             Map.Entry entry = (Map.Entry) e;
             customerJson = (JsonObject) entry.getValue();
         }
-        System.out.println("Response Code : " + customerJson);
+        
+        // Check if customer is activated
+        if (!object.getBoolean("activated") 
+        {
+            System.out.println("CUSTOMER IS NOT ACIVATED!!!!");
+            throw new RuntimeException("Customer is not activated.");
+        }
+        
+        // Check password
+        String password = object.getString("password");
+        if (!password.equals(customer.getPassword())) 
+        {
+            System.out.println("INVALID PASSWORD!!!!");
+            throw new RuntimeException("Invalid password.");
+        }
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

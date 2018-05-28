@@ -6,30 +6,19 @@
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_orderOutputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_orderInputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_GroupIdInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_orderOutputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderInputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_GroupIdInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_orderOutputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderInputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_orderOutputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__78040DC6-C5E2-4119-8790-13AF22F37E63_orderInputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__78040DC6-C5E2-4119-8790-13AF22F37E63_orderOutputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_TaskNameInputXItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderInputXItem" structureRef="com.myspace.washit.Order"/>
-  <bpmn2:itemDefinition id="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_OrderOutputXItem" structureRef="com.myspace.washit.Order"/>
   <bpmn2:itemDefinition id="__0E65F8AA-4AEA-476C-B22B-065B28A997C9_DepositOutputXItem" structureRef="String"/>
   <bpmn2:process id="src.OrderCreation" drools:packageName="com.myspace.washit" drools:version="1.0" name="OrderCreation" isExecutable="true">
     <bpmn2:property id="customer" itemSubjectRef="_customerItem"/>

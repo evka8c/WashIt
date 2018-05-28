@@ -228,16 +228,6 @@ created]]></drools:metaValue>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_40E11DB8-D85C-456B-8058-EE8CFBFE08A2</bpmn2:incoming>
       <bpmn2:outgoing>_3DE72D65-73F0-4435-9123-97276FA4EB6F</bpmn2:outgoing>
-      <bpmn2:ioSpecification id="_OQtNyGKDEeiHBNO8JGZicg">
-        <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX" drools:dtype="String" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputXItem" name="TaskName"/>
-        <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputX" drools:dtype="Object" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputXItem" name="Skippable"/>
-        <bpmn2:dataInput id="_78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputX" drools:dtype="Object" itemSubjectRef="__78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputXItem" name="GroupId"/>
-        <bpmn2:inputSet id="_OQtNyWKDEeiHBNO8JGZicg">
-          <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_GroupIdInputX</bpmn2:dataInputRefs>
-          <bpmn2:dataInputRefs>_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX</bpmn2:dataInputRefs>
-        </bpmn2:inputSet>
-      </bpmn2:ioSpecification>
       <bpmn2:dataInputAssociation id="_OQtNy2KDEeiHBNO8JGZicg">
         <bpmn2:targetRef>_78040DC6-C5E2-4119-8790-13AF22F37E63_TaskNameInputX</bpmn2:targetRef>
         <bpmn2:assignment id="_OQtNzGKDEeiHBNO8JGZicg">

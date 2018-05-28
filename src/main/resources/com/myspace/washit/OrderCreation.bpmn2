@@ -8,7 +8,6 @@
   <bpmn2:itemDefinition id="__52F6BDF8-23AC-4D5E-A13F-A9EC69417807_GroupIdInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__BB674372-3144-4EA9-AE6D-6E87F819406E_SkippableInputXItem" structureRef="Object"/>
-  <bpmn2:itemDefinition id="__3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputXItem" structureRef="String"/>
   <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_SkippableInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__F8C93EAF-44B1-450A-BBF8-DD3329BF15B4_GroupIdInputXItem" structureRef="Object"/>
   <bpmn2:itemDefinition id="__78040DC6-C5E2-4119-8790-13AF22F37E63_SkippableInputXItem" structureRef="Object"/>
@@ -156,12 +155,6 @@ created]]></drools:metaValue>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_904ABD83-F8A9-4FEA-8033-EA03DEF116D3</bpmn2:incoming>
       <bpmn2:outgoing>_75080EA0-FFAA-4BC2-9F67-A7AFFBCA9892</bpmn2:outgoing>
-      <bpmn2:dataInputAssociation id="_OQtNqWKDEeiHBNO8JGZicg">
-        <bpmn2:targetRef>_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputX</bpmn2:targetRef>
-        <bpmn2:assignment id="_OQtNqmKDEeiHBNO8JGZicg">
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="_OQtNq2KDEeiHBNO8JGZicg"><![CDATA[PickupDeliveryTime]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="_OQtNrGKDEeiHBNO8JGZicg">_3CC66C18-372E-4D42-8D01-8364DAFE5BE9_TaskNameInputX</bpmn2:to>
-        </bpmn2:assignment>
       </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Select additional services">

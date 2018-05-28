@@ -11,6 +11,7 @@ import java.util.Scanner;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonArray;
+import javax.json.JsonValue;
 import java.util.Iterator;
 
 import org.kie.api.runtime.process.WorkItem;
@@ -34,23 +35,15 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         
         // Check if user exists
         String jsonString = jsonGetRequest(url);
+        if (!jsonString.contains(customer.getEmail())) {
+            System.out.println("CUSTOMER DOES NOT EXISTS!!!!");
+            throw new RuntimeException("There is no customer with filled email address in system.");
+        };
         
-        System.out.println("CUSTOMER DOES EXISTS!!!!" + jsonString);
-        
-        
-        //if (!jsonString.contains(customer.getEmail())) {
-          //  System.out.println("CUSTOMER DOES NOT EXISTS!!!!");
-        //    throw new RuntimeException("There is no customer with filled email address in system.");
-        //};
-        
-        System.out.println("CUSTOMER DOES EXISTS!!!!");
-        System.out.println("Email: " + customer.getEmail());
-        System.out.println("Password: " + customer.getPassword());
-        
-        //JsonArray allCustomersArray = Json.createReader(new StringReader(jsonString)).readArray();
-        //for (javax.json.JsonValue jsonValue : value) {
-          //  System.out.println(jsonValue);
-        //}
+        JsonArray customerArray = Json.createReader(new StringReader(jsonString)).readArray();
+        for (jsonValue : customerArray) {
+            System.out.println(jsonValue);
+        }
         
         
         // Notify manager that work item has been completed

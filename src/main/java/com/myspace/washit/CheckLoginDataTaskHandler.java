@@ -8,8 +8,6 @@ import java.io.StringReader;
 import javax.net.ssl.HttpsURLConnection;
 import java.net.URL;
 import java.util.Scanner;
-import javax.json.Json;
-import javax.json.JsonObject;
 import javax.json.JsonArray;
 import javax.json.JsonValue;
 import java.util.Iterator;

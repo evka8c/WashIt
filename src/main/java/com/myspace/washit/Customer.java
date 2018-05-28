@@ -23,6 +23,9 @@ public class Customer implements java.io.Serializable {
 
 	private java.lang.String firebaseId;
 
+	@org.kie.api.definition.type.Label(value = "Customer orders")
+	private java.util.List<com.myspace.washit.Order> orders;
+
 	public Customer() {
 		this.registrationCode = "";
 		this.activated = false;
@@ -92,10 +95,19 @@ public class Customer implements java.io.Serializable {
 		this.firebaseId = firebaseId;
 	}
 
+	public java.util.List<com.myspace.washit.Order> getOrders() {
+		return this.orders;
+	}
+
+	public void setOrders(java.util.List<com.myspace.washit.Order> orders) {
+		this.orders = orders;
+	}
+
 	public Customer(java.lang.Boolean activated, java.lang.String address,
 			java.lang.String password, java.lang.String email,
 			java.lang.String firstName, java.lang.String lastName,
-			java.lang.String registrationCode, java.lang.String firebaseId) {
+			java.lang.String registrationCode, java.lang.String firebaseId,
+			java.util.List<com.myspace.washit.Order> orders) {
 		this.activated = activated;
 		this.address = address;
 		this.password = password;
@@ -104,6 +116,7 @@ public class Customer implements java.io.Serializable {
 		this.lastName = lastName;
 		this.registrationCode = registrationCode;
 		this.firebaseId = firebaseId;
+		this.orders = orders;
 	}
 
 }

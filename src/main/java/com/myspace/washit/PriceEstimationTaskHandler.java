@@ -16,15 +16,22 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
         // Extract parameters
-        //Order order = (Order) workItem.getParameter("Order");
-        Customer customer = (Customer) workItem.getParameter("Order");
+        Order order = (Order) workItem.getParameter("Order");
         
-        System.out.println("DATA OK!!!: " + customer.getFirstName());
-        System.out.println("DATA OK!!!: " + customer.getLastName());
-        System.out.println("DATA OK!!!: " + customer.getEmail());
-        System.out.println("DATA OK!!!: " + customer.getPassword());
-        System.out.println("DATA OK!!!: " + customer.getAddress());
-        System.out.println("DATA OK!!!: " + customer.getActivated());
+        System.out.println("SHIRTS?: " + order.getShirts());
+        System.out.println("BLOUSES?: " + order.getBlouses());
+        System.out.println("T-SHIRTS?: " + order.gettShirts());
+        System.out.println("JEANS?: " + order.getJeans());
+        System.out.println("SHORTS?: " + order.getShorts());
+        System.out.println("JUMPERS?: " + order.getJumpers());
+        System.out.println("ESTIMATED WEIGHT?: " + order.getEstimatedWeight());
+        System.out.println("LAUNDRY PROGRAM?: " + order.getLaundryProgram());
+        System.out.println("IRONING?: " + order.getIroning());
+        System.out.println("ADD CLOTHES HANGERS?: " + order.getAddClothesHangers());
+        System.out.println("PICK UP DATE?: " + order.getPickUpDate());
+        System.out.println("DELIVERY DATE?: " + order.getDeliveryDate());
+
+
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

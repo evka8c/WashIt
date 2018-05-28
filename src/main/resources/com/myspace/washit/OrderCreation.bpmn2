@@ -155,7 +155,6 @@ created]]></drools:metaValue>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_904ABD83-F8A9-4FEA-8033-EA03DEF116D3</bpmn2:incoming>
       <bpmn2:outgoing>_75080EA0-FFAA-4BC2-9F67-A7AFFBCA9892</bpmn2:outgoing>
-      </bpmn2:dataInputAssociation>
     </bpmn2:userTask>
     <bpmn2:userTask id="_F8C93EAF-44B1-450A-BBF8-DD3329BF15B4" drools:selectable="true" drools:scriptFormat="http://www.java.com/java" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Select additional services">
       <bpmn2:extensionElements>

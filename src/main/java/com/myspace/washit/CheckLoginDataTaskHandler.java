@@ -44,10 +44,12 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         JsonObject json = jsonReader.readObject();
         jsonReader.close();
         JsonObject customerJson = null;
+        String firebaseId = "";
 	    for (Object e : json.entrySet()) 
 	    {
             Map.Entry entry = (Map.Entry) e;
             customerJson = (JsonObject) entry.getValue();
+            firebaseId = (String) entry.getKey();
         }
         
         // Check if customer is activated

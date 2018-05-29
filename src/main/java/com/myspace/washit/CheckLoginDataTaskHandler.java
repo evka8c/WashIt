@@ -70,7 +70,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         }
         
         // Set other properties
-        System.out.println(firebaseId);
+        customer.setFirebaseIr(firebaseId);
         customer.setAddress(customerJson.getString("address"));
         customer.setFirstName(customerJson.getString("firstName"));
         customer.setLastName(customerJson.getString("lastName"));

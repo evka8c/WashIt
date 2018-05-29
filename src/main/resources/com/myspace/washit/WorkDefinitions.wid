@@ -156,4 +156,15 @@
     "icon" : "defaultservicenodeicon.png"
   ],
   
+  [
+    "name" : "MakePaymentTask",
+    "parameters" : [
+        "PaymentInfo" : new ObjectDataType(),
+    ],
+    "results" : [
+        "PaymentSucceeded" : new BooleanDataType(),
+    ],
+    "displayName" : "MakePaymentTask",
+    "icon" : "defaultservicenodeicon.png"
+  ],
 ]

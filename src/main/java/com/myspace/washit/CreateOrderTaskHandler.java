@@ -1,7 +1,7 @@
 package com.myspace.washit;
 
-import com.myspace.Order;
-import com.myspace.Customer;
+import com.myspace.washit.Order;
+import com.myspace.washit.Customer;
 import java.util.Map;
 import java.util.HashMap;
 import javax.json.Json;

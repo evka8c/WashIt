@@ -40,8 +40,8 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         System.out.println("ADD CLOTHES HANGERS?: " + order.getAddClothesHangers());
         
         // Get price list
-        String url = "http://www.mocky.io/v2/5b0d551531000058009d5632";
-        String json = null;
+        String url = "https://www.mocky.io/v2/5b0d551531000058009d5632";
+        JsonObject priceListJson = null;
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
@@ -70,7 +70,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            String dateString = object.getString("localDate");
+            priceListJson = object
             
             // Response code
             int responseCode = con.getResponseCode();
@@ -79,6 +79,16 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
 		    
         }   catch (Exception e) {
             e.printStackTrace();
+        }
+        
+        // Do price estimate based on order's data
+        Double priceEstimate = 0;
+        int kinds = 0
+        
+        JsonObject laundryTypeJson = priceListJson.getJsonObject("laundryType");
+        if (order.getShirts()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("localDate").doubleValue();
         }
         
         String deposit = "10000";

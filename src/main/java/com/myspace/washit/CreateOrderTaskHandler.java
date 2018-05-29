@@ -33,7 +33,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         Order order = (Order) workItem.getParameter("Order");
         Customer customer = (Customer) workItem.getParameter("Customer");
         
-        // Store customer's data
+        // Store order data
         String json = Json.createObjectBuilder()
         //    .add("activated", customer.getActivated())
         //    .add("address", customer.getAddress())
@@ -81,7 +81,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
             String firebaseId = object.getString("name");
-            customer.setFirebaseId(firebaseId);
+            order.setFirebaseId(firebaseId);
 
         } catch (Exception e){
             e.printStackTrace();

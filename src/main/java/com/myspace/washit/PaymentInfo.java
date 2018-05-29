@@ -6,12 +6,58 @@ package com.myspace.washit;
 
 public class PaymentInfo implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public PaymentInfo() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name on bank card")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Bank Card Number")
+	private java.lang.Long cardNumber;
+	@org.kie.api.definition.type.Label(value = "Valid Thru")
+	private java.lang.String validThrough;
+	@org.kie.api.definition.type.Label(value = "CVV")
+	private java.lang.Long cvv;
 
+	public PaymentInfo() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.Long getCardNumber() {
+		return this.cardNumber;
+	}
+
+	public void setCardNumber(java.lang.Long cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public java.lang.String getValidThrough() {
+		return this.validThrough;
+	}
+
+	public void setValidThrough(java.lang.String validThrough) {
+		this.validThrough = validThrough;
+	}
+
+	public java.lang.Long getCvv() {
+		return this.cvv;
+	}
+
+	public void setCvv(java.lang.Long cvv) {
+		this.cvv = cvv;
+	}
+
+	public PaymentInfo(java.lang.String name, java.lang.Long cardNumber,
+			java.lang.String validThrough, java.lang.Long cvv) {
+		this.name = name;
+		this.cardNumber = cardNumber;
+		this.validThrough = validThrough;
+		this.cvv = cvv;
+	}
 
 }

@@ -124,5 +124,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
             priceEstimate += laundryTypeJson.getJsonNumber("jumpers").doubleValue();
             kinds++;
         }
+        
+        return priceEstimate;
     }
 }

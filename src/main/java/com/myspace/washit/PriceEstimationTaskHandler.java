@@ -98,34 +98,3 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
     
     public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}
 }
-
-
-
-
-
-
-    public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
-    {
-        // Extract parameters
-        Order order = (Order) workItem.getParameter("Order");
-        Date pickupDate = order.getPickUpDate();
-        Date deliveryDate = order.getDeliveryDate();
-        
-        
-
-        if (pickupDate.compareTo(availableDate) <= 0) 
-        {
-            System.out.println("SELECTED DATE IS NOT AVAILABLE");
-            throw new RuntimeException("The selected date is not available.");
-        }
-        
-        // Check if delivery is later than pick up
-        if (pickupDate.compareTo(deliveryDate) >= 0) 
-        {
-            System.out.println("INVALID DELIVERY DATE!!!");
-            throw new RuntimeException("Delivery date must be greater than pick up date.");
-        }
-        
-        // Notify manager that work item has been completed
-        manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
-    }

@@ -14,6 +14,7 @@ import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -33,7 +34,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         Date deliveryDate = order.getDeliveryDate();
         
         // Reservation system url
-        String url = "http://www.convert-unix-time.com/api?timestamp=now&timezone=prague";
+        String url = "http://www.convert-unix-time.com/api?timestamp=now&timezone=prague&format=iso8601";
         
         // Check availability of pick up and delivery dates and times
         Date availableDate = null;

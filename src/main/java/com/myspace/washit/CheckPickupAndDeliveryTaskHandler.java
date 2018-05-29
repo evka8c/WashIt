@@ -77,7 +77,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         
         System.out.println("INVALID DELIVERY DATE!!! PD " + pickupDate);
         System.out.println("INVALID DELIVERY DATE!!! DT " + deliveryDate);
-        System.out.println("INVALID DELIVERY DATE!!! TS " + timestamp);
+        System.out.println("INVALID DELIVERY DATE!!! TS " + availableDate);
         
         if (pickupDate.compareTo(availableDate) <= 0) 
         {

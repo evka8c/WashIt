@@ -65,8 +65,10 @@ public class Order implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Delivered")
 	private java.lang.Boolean delivered;
 
-	@org.kie.api.definition.type.Label(value = "Firebase ID")
+	@org.kie.api.definition.type.Label("Firebase ID")
 	private java.lang.String firebaseId;
+
+	private java.lang.String customerFirebaseId;
 
 	public Order() {
 	}
@@ -231,6 +233,14 @@ public class Order implements java.io.Serializable {
 		this.firebaseId = firebaseId;
 	}
 
+	public java.lang.String getCustomerFirebaseId() {
+		return this.customerFirebaseId;
+	}
+
+	public void setCustomerFirebaseId(java.lang.String customerFirebaseId) {
+		this.customerFirebaseId = customerFirebaseId;
+	}
+
 	public Order(java.lang.Boolean shirts, java.lang.Boolean blouses,
 			java.lang.Boolean tShirts, java.lang.Boolean jeans,
 			java.lang.Boolean shorts, java.lang.Boolean jumpers,
@@ -240,7 +250,8 @@ public class Order implements java.io.Serializable {
 			java.util.Date deliveryDate, java.lang.Double estimatedPrice,
 			java.lang.Double realPrice, java.lang.Boolean depositPaid,
 			java.lang.Boolean orderPaid, java.lang.Boolean pickedUp,
-			java.lang.Boolean delivered, java.lang.String firebaseId) {
+			java.lang.Boolean delivered, java.lang.String firebaseId,
+			java.lang.String customerFirebaseId) {
 		this.shirts = shirts;
 		this.blouses = blouses;
 		this.tShirts = tShirts;
@@ -261,6 +272,7 @@ public class Order implements java.io.Serializable {
 		this.pickedUp = pickedUp;
 		this.delivered = delivered;
 		this.firebaseId = firebaseId;
+		this.customerFirebaseId = customerFirebaseId;
 	}
 
 }

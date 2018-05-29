@@ -13,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;

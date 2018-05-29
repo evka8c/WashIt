@@ -65,6 +65,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
+		    System.out.println("PRICING LIST RETRIEVED!!!");
 		    
         }   catch (Exception e) {
             e.printStackTrace();
@@ -72,6 +73,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         
         // Do price estimate based on order's data
         String deposit = String.valueOf(getPriceEstimate(order, priceListJson));
+        System.out.println("PRICE ESTIMATION DONE!!!");
         
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();
@@ -136,7 +138,6 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         else {
             priceEstimate = priceEstimate * laundryProgramJson.getJsonNumber("firstClass").doubleValue();
         }
-        System.out.println("PRICE ESTIMATE 2: " + priceEstimate);
         
         // Additional services
         JsonObject additionalServicesJson = priceListJson.getJsonObject("additionalServices");
@@ -146,8 +147,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         if (order.getAddClothesHangers())  {
             priceEstimate += additionalServicesJson.getJsonNumber("clothesHangers").doubleValue();
         }
-        System.out.println("PRICE ESTIMATE 3: " + priceEstimate);
-        
+
         return priceEstimate;
     }
 }

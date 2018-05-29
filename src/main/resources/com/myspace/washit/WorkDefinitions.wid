@@ -172,6 +172,7 @@
     "name" : "CreateOrderTask",
     "parameters" : [
         "Order" : new ObjectDataType(),
+        "Customer" : new ObjectDataType(),
     ],
     "displayName" : "CreateOrderTask",
     "icon" : "defaultservicenodeicon.png"

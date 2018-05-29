@@ -87,7 +87,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
             e.printStackTrace();
         }
 
-        System.out.println("CUSTOMER CREATED!!!");
+        System.out.println("ORDER CREATED!!!");
 
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

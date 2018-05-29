@@ -128,13 +128,13 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         // Laundry program
         JsonObject laundryProgramJson = priceListJson.getJsonObject("laundryProgram");
         if (order.getLaundryProgram().equals("Economy")) {
-            priceEstimate = priceEstimate * laundryTypeJson.getJsonNumber("economy").doubleValue();
+            priceEstimate = priceEstimate * laundryProgramJson.getJsonNumber("economy").doubleValue();
         }
         else if (order.getLaundryProgram().equals("Business")) {
-            priceEstimate = priceEstimate * laundryTypeJson.getJsonNumber("business").doubleValue();
+            priceEstimate = priceEstimate * laundryProgramJson.getJsonNumber("business").doubleValue();
         }
         else {
-            priceEstimate = priceEstimate * laundryTypeJson.getJsonNumber("firstClass").doubleValue();
+            priceEstimate = priceEstimate * laundryProgramJson.getJsonNumber("firstClass").doubleValue();
         }
         System.out.println("PRICE ESTIMATE 2: " + priceEstimate);
         

@@ -4,7 +4,7 @@ import com.myspace.washit.Order;
 import java.util.Map;
 import java.util.HashMap;
 
-import javax.net.ssl.HttpsURLConnection;
+import java.net.HttpURLConnection;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
@@ -32,7 +32,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         String url = "http://www.mocky.io/v2/5b0d65c4310000b20c9d568c";
         JsonObject priceListJson = null;
         try {
-            HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
+            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
             
             // Header
             con.setRequestMethod("GET");

@@ -28,8 +28,8 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
     {
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
-        Timestamp pickupDate = order.getPickUpDate().getTime();
-        Timestamp deliveryDate = order.getDeliveryDate().getTime();
+        Timestamp pickupDate = Timestamp(order.getPickUpDate().getTime());
+        Timestamp deliveryDate = Timestamp(order.getDeliveryDate().getTime());
         
         // Reservation system url
         String url = "http://www.convert-unix-time.com/api?timestamp=now";

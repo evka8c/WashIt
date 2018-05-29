@@ -71,20 +71,23 @@ public class MakePaymentTaskHandler implements java.io.Serializable, WorkItemHan
 		    }
 		    in.close();
 		    
-		    System.out.println("AAAAAAA: " + response.toString());
-		    
-		    // Store Firebase Id
-		    //JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
-            //JsonObject object = jsonReader.readObject();
-            //jsonReader.close();
-            //String firebaseId = object.getString("name");
-            //customer.setFirebaseId(firebaseId);
+		    // Get payment status
+		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
+            JsonObject object = jsonReader.readObject();
+            jsonReader.close();
+            String paymentStatus = object.getString("status");
+            if (paymentStatus.equals("OK")) 
+            {
+                paymentSuceeded = true;
+                System.out.println("PAYMENT WAS SUCCESSFUL!!!");
+            }
+            else {
+                System.out.println("PAYMENT FAILED!!!");
+            }
 
         } catch (Exception e){
             e.printStackTrace();
         }
-
-        System.out.println("!!!");
 
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();

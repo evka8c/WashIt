@@ -7,13 +7,11 @@ import java.util.HashMap;
 import javax.net.ssl.HttpsURLConnection;
 import javax.json.Json;
 import javax.json.JsonObject;
-//import javax.json.JsonReader;
-//import java.net.URL;
+import javax.json.JsonReader;
+import java.net.URL;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.StringReader;
-//import java.net.HttpURLConnection;
-//import java.util.Date;
 //import java.text.SimpleDateFormat;
 //import java.text.DateFormat;
 //import java.util.Locale;
@@ -46,7 +44,6 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         
         // Get price list
         String url = "http://www.mocky.io/v2/5b0d551531000058009d5632";
-        Date availableDate = null;
         
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();

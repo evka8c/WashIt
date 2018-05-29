@@ -1,6 +1,7 @@
 package com.myspace.washit;
 
 import com.myspace.Order;
+import com.myspace.Customer;
 import java.util.Map;
 import java.util.HashMap;
 import javax.json.Json;
@@ -30,6 +31,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
+        Customer customer = (Customer) workItem.getParameter("Customer");
         
         // Store customer's data
         String json = Json.createObjectBuilder()

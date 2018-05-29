@@ -33,13 +33,16 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         Order order = (Order) workItem.getParameter("Order");
         Customer customer = (Customer) workItem.getParameter("Customer");
         
+        // Formatter for ISO8601 date
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.ENGLISH);
+
         // Store order data
         String json = Json.createObjectBuilder()
             .add("addClothesHangers", order.getAddClothesHangers())
             .add("blouses", order.getBlouses())
             .add("customerFirebaseId", customer.getFirebaseId())
             .add("delivered", false)
-            .add("deliveryDate", order.getDeliveryDate())
+            .add("deliveryDate", format.format(order.getDeliveryDate()))
             .add("depositPaid", true)
             .add("estimatedPrice", order.getEstimatedPrice())
             .add("estimatedWeight", order.getEstimatedWeight())

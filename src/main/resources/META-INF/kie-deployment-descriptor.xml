@@ -36,12 +36,6 @@
         </work-item-handler>
         <work-item-handler>
             <resolver>mvel</resolver>
-            <identifier>new com.myspace.washit.MakePaymentTaskHandler()</identifier>
-            <parameters/>
-            <name>MakePaymentTask</name>
-        </work-item-handler>
-        <work-item-handler>
-            <resolver>mvel</resolver>
             <identifier>new com.myspace.washit.DeleteCustomerTaskHandler()</identifier>
             <parameters/>
             <name>DeleteCustomerTask</name>

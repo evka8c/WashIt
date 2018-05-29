@@ -8,13 +8,14 @@ public class PaymentInfo implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Bank Card Number")
+	@org.kie.api.definition.type.Label("Bank Card Number")
 	private java.lang.String cardNumber;
-	@org.kie.api.definition.type.Label(value = "CVV")
+	@org.kie.api.definition.type.Label("CVV")
 	private java.lang.String cvv;
-	@org.kie.api.definition.type.Label(value = "Name on Bank Card")
+	@org.kie.api.definition.type.Label("Name on Bank Card")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "Valid Thru")
+	@org.kie.api.definition.type.Label("Valid Thru")
+	@org.kie.api.definition.type.Description("A 3-digit number in reverse italics on the back of your credit card")
 	private java.lang.String validThrough;
 
 	public PaymentInfo() {

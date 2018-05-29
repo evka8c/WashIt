@@ -68,9 +68,6 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
             String dateString = object.getString("localDate");
-            
-            System.out.println("INVALID DELIVERY DATE!!! XX " + dateString);
-            
             DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.ENGLISH);
             availableDate = format.parse(dateString);
             
@@ -82,11 +79,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         }   catch (Exception e) {
             e.printStackTrace();
         }
-        
-        System.out.println("INVALID DELIVERY DATE!!! PD " + pickupDate);
-        System.out.println("INVALID DELIVERY DATE!!! DT " + deliveryDate);
-        System.out.println("INVALID DELIVERY DATE!!! TS " + availableDate);
-        
+
         if (pickupDate.compareTo(availableDate) <= 0) 
         {
             System.out.println("SELECTED DATE IS NOT AVAILABLE");

@@ -27,7 +27,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
 
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
-        String url = "https://washit-18577.firebaseio.com/customers.json";
+        String url = "https://washit-18577.firebaseio.com/orders.json";
         
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");

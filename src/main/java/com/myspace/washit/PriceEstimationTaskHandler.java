@@ -73,6 +73,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         
         // Do price estimate based on order's data
         String amount = String.valueOf(getPriceEstimate(order, priceListJson));
+        order.setEstimatedPrice(amount);
         System.out.println("PRICE ESTIMATION DONE!!!");
         
         // Notify manager that work item has been completed

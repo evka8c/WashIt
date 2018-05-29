@@ -162,7 +162,7 @@
         "PaymentInfo" : new ObjectDataType(),
     ],
     "results" : [
-        "PaymentSucceeded" : new StringDataType(),
+        "PaymentSucceeded" : new BoolesDataType(),
     ],
     "displayName" : "MakePaymentTask",
     "icon" : "defaultservicenodeicon.png"

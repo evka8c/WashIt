@@ -63,7 +63,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            timestamp = object.getJsonNumber("timestamp");
+            timestamp = object.getJsonNumber("timestamp").longValue();
             
             // Response code
             int responseCode = con.getResponseCode();

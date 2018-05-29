@@ -70,7 +70,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            priceListJson = object
+            priceListJson = object;
             
             // Response code
             int responseCode = con.getResponseCode();

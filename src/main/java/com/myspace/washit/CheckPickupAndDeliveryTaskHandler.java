@@ -64,7 +64,9 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            availableDate = new Date(object.getJsonNumber("timestamp").longValue());
+            String dateString = object.getString("localDate");
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX", Locale.ENGLISH);
+            availableDate = format.parse(dateString);
             
             // Response code
             int responseCode = con.getResponseCode();

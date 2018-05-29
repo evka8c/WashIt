@@ -12,7 +12,6 @@ import javax.net.ssl.HttpsURLConnection;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.StringReader;
-import java.sql.Timestamp;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -28,8 +27,8 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
     {
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
-        Timestamp pickupDate = Timestamp(order.getPickUpDate().getTime());
-        Timestamp deliveryDate = Timestamp(order.getDeliveryDate().getTime());
+        long pickupDate = order.getPickUpDate().getTime();
+        long deliveryDate = order.getDeliveryDate().getTime();
         
         // Reservation system url
         String url = "http://www.convert-unix-time.com/api?timestamp=now";

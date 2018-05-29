@@ -4,6 +4,7 @@ import com.myspace.washit.Order;
 import java.util.Map;
 import java.util.HashMap;
 
+import javax.net.ssl.HttpsURLConnection;
 //import javax.json.Json;
 //import javax.json.JsonObject;
 //import javax.json.JsonReader;

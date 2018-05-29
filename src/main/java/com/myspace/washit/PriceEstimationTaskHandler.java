@@ -28,12 +28,8 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
         
-        System.out.println("ESTIMATED WEIGHT?: " + order.getEstimatedWeight());
-        System.out.println("IRONING?: " + order.getIroning());
-        System.out.println("ADD CLOTHES HANGERS?: " + order.getAddClothesHangers());
-        
         // Get price list
-        String url = "https://www.mocky.io/v2/5b0d551531000058009d5632";
+        String url = "https://www.mocky.io/v2/5b0d65c4310000b20c9d568c";
         JsonObject priceListJson = null;
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
@@ -92,6 +88,10 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         Double priceEstimate = 0.0;
         int kinds = 0;
         
+        // Estimated weight
+        Double estimatedWeight = order.getEstimatedWeight();
+        System.out.println("ESTIMATED WEIGHT: " + order.getEstimatedWeight());
+        
         // Laundry type
         JsonObject laundryTypeJson = priceListJson.getJsonObject("laundryType");
         if (order.getShirts()) 
@@ -124,25 +124,30 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
             priceEstimate += laundryTypeJson.getJsonNumber("jumpers").doubleValue();
             kinds++;
         }
-        priceEstimate = priceEstimate / kinds;
+        priceEstimate = priceEstimate / kinds * estimatedWeight;
         System.out.println("PRICE ESTIMATE 1: " + priceEstimate);
         
         // Laundry program
+        JsonObject laundryProgramJson = priceListJson.getJsonObject("laundryType");
         if (order.getLaundryProgram().equals("Economy")) {
-            
+            priceEstimate = priceEstimate * laundryTypeJson.getJsonNumber("economy").doubleValue();
         }
         else if (order.getLaundryProgram().equals("Business")) {
-            
+            priceEstimate = priceEstimate * laundryTypeJson.getJsonNumber("business").doubleValue();
         }
         else {
-            
+            priceEstimate = priceEstimate * laundryTypeJson.getJsonNumber("firstClass").doubleValue();
         }
+        System.out.println("PRICE ESTIMATE 2: " + priceEstimate);
         
         // Additional services
-        
-        
-        // Estimated weight
-        
+        JsonObject additionalServicesJson = priceListJson.getJsonObject("additionalServices");
+        if (order.getIroning())  {
+            priceEstimate += additionalServicesJson.getJsonNumber("ironing").doubleValue() * estimatedWeight;
+        }
+        if (order.getAddClothesHangers())  {
+            priceEstimate += additionalServicesJson.getJsonNumber("clothesHangers").doubleValue();
+        }
         
         return priceEstimate;
     }

@@ -148,6 +148,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         if (order.getAddClothesHangers())  {
             priceEstimate += additionalServicesJson.getJsonNumber("clothesHangers").doubleValue();
         }
+        System.out.println("PRICE ESTIMATE 3: " + priceEstimate);
         
         return priceEstimate;
     }

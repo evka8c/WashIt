@@ -3,6 +3,7 @@ package com.myspace.washit;
 import com.myspace.washit.Order;
 import java.util.Map;
 import java.util.HashMap;
+import javax.json.Json;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -21,8 +22,8 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         long pickupDate = order.getPickUpDate().getTime();
         long deliveryDate = order.getDeliveryDate().getTime();
         
-        System.out.println("PICK UP DATE?: " + pickupDate);
-        System.out.println("DELIVERY DATE?: " + deliveryDate);
+        System.out.println("PICK UP DATE: " + pickupDate);
+        System.out.println("DELIVERY DATE: " + deliveryDate);
         
         // Create 
         String json = Json.createObjectBuilder()

@@ -21,25 +21,11 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         long pickupDate = order.getPickUpDate().getTime();
         long deliveryDate = order.getDeliveryDate().getTime();
         
+        // Reservation system url
+        String url = "http://www.convert-unix-time.com/api?timestamp=now";
+        
         // Check availability of pick up and delivery dates and times
-        
-        
-        // Notify manager that work item has been completed
-        manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
-    }
-    
-    public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}
-    
-    
-    private static String streamToString(InputStream inputStream) 
-    {
-        String text = new Scanner(inputStream, "UTF-8").useDelimiter("\\Z").next();
-        return text;
-    }
-    
-    private static String jsonGetRequest(String url) 
-    {
-        String json = null;
+        String timestamp = "";
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
@@ -53,9 +39,24 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
             con.setDoOutput(true);
             con.setInstanceFollowRedirects(false);
             con.connect();
-            InputStream inStream = con.getInputStream();
-            json = streamToString(inStream);
             
+            // Response
+            BufferedReader in = new BufferedReader(
+		        new InputStreamReader(con.getInputStream()));
+	    	String inputLine;
+		    StringBuffer response = new StringBuffer();
+
+		    while ((inputLine = in.readLine()) != null) {
+			    response.append(inputLine);
+		    }
+		    in.close();
+		    
+		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
+            JsonObject object = jsonReader.readObject();
+            jsonReader.close();
+            timestamp = object.getString("timestamp");
+            
+            // Response code
             int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
@@ -64,34 +65,13 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
             ex.printStackTrace();
         }
         
-        return json;
-    }
-}
-
-
-public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
-    {
-        // Extract parameters
-        Customer customer = (Customer) workItem.getParameter("Customer");
+        //if ()
         
-        // Prepare url for email
-        String url = "https://washit-18577.firebaseio.com/customers.json?orderBy=\"email\"&equalTo=\"" + customer.getEmail() + "\"";
-        
-        // Check if customer exists
-        String json = jsonGetRequest(url);
-        if (json.contains(customer.getEmail())) 
-        {
-            System.out.println("EMAIL ALREADY EXISTS!!!");
-            throw new RuntimeException("There is already a customer with filled email address.");
-        };
-        
-        System.out.println("DATA OK!!!");
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
     }
     
     public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}
-    
-    
+}
     

@@ -82,7 +82,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         }
         
         // Do price estimate based on order's data
-        Double priceEstimate = 0;
+        Double priceEstimate = 0.0;
         int kinds = 0;
         
         JsonObject laundryTypeJson = priceListJson.getJsonObject("laundryType");

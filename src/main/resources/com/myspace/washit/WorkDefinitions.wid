@@ -167,4 +167,14 @@
     "displayName" : "MakePaymentTask",
     "icon" : "defaultservicenodeicon.png"
   ],
+  
+  [
+    "name" : "CreateOrderTask",
+    "parameters" : [
+        "Order" : new ObjectDataType(),
+    ],
+    "displayName" : "CreateOrderTask",
+    "icon" : "defaultservicenodeicon.png"
+  ],
+  
 ]

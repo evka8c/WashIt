@@ -1,5 +1,6 @@
 package com.myspace.washit;
 
+import com.myspace.Order;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
@@ -29,7 +30,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         String url = "https://washit-18577.firebaseio.com/customers.json";
         
         // Extract parameters
-        Customer customer = (Customer) workItem.getParameter("Customer");
+        Order customer = (Customer) workItem.getParameter("Customer");
         
         // Generate registration code
         String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));

@@ -68,6 +68,7 @@ public class CheckLoginDataTaskHandler implements java.io.Serializable, WorkItem
         }
         
         // Set other properties
+        System.out.println(customerJson);
         customer.setAddress(customerJson.getString("address"));
         customer.setFirstName(customerJson.getString("firstName"));
         customer.setLastName(customerJson.getString("lastName"));

@@ -34,7 +34,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         String url = "http://www.convert-unix-time.com/api?timestamp=now";
         
         // Check availability of pick up and delivery dates and times
-        String timestamp = "";
+        long timestamp = 0;
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
@@ -63,7 +63,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            timestamp = object.getString("timestamp");
+            timestamp = object.getLong("timestamp");
             
             // Response code
             int responseCode = con.getResponseCode();
@@ -73,6 +73,17 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         }   catch (Exception e){
             e.printStackTrace();
         }
+        
+        if (pickupDate - )
+        
+        // Check if delivery is later than pick up
+        if (pickupDate - deliveryDate > 0) 
+        {
+            System.out.println("INVALID DELIVERY DATE!!!");
+            throw new RuntimeException("Delivery date must be greater than pick up date.");
+        }
+        
+        
         
         //if ()
         // Check registration code

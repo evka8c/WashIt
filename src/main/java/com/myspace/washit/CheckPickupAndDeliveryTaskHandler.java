@@ -32,7 +32,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         Date deliveryDate = order.getDeliveryDate();
         
         // Reservation system url
-        String url = "http://www.convert-unix-time.com/api?timestamp=now";
+        String url = "http://www.convert-unix-time.com/api?timestamp=now&timezone=prague";
         
         // Check availability of pick up and delivery dates and times
         Date availableDate = null;

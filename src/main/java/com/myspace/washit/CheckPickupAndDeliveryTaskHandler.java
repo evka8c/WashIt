@@ -8,10 +8,10 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.StringReader;
+import java.net.HttpURLConnection;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;
@@ -36,7 +36,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         // Check availability of pick up and delivery dates and times
         long timestamp = 0;
         try {
-            HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
+            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
             
             // Header
             con.setRequestMethod("GET");

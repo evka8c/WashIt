@@ -35,7 +35,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
         String url = "http://www.convert-unix-time.com/api?timestamp=now";
         
         // Check availability of pick up and delivery dates and times
-        long timestamp = 0;
+        Date timestamp = null;
         try {
             HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
             
@@ -64,7 +64,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            timestamp = object.getJsonNumber("timestamp").longValue();
+            timestamp = new Date(object.getJsonNumber("timestamp").longValue());
             
             // Response code
             int responseCode = con.getResponseCode();

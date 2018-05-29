@@ -33,9 +33,9 @@ public class MakePaymentTaskHandler implements java.io.Serializable, WorkItemHan
         // Send payment info
         String json = Json.createObjectBuilder()
             .add("cardNumber", paymentInfo.getCardNumber())
-            .add("cvv", customer.getCvv())
-            .add("name", customer.getName())
-            .add("validThrough", customer.getValidThrough())
+            .add("cvv", paymentInfo.getCvv())
+            .add("name", paymentInfo.getName())
+            .add("validThrough", paymentInfo.getValidThrough())
             .build()
             .toString();
         

@@ -74,24 +74,18 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
             e.printStackTrace();
         }
         
-        if (pickupDate - )
+        if (pickupDate - timestamp >= 0) 
+        {
+            System.out.println("SELECTED DATE IS NOT AVAILABLE");
+            throw new RuntimeException("The selected date is not available.");
+        }
         
         // Check if delivery is later than pick up
-        if (pickupDate - deliveryDate > 0) 
+        if (pickupDate - deliveryDate >= 0) 
         {
             System.out.println("INVALID DELIVERY DATE!!!");
             throw new RuntimeException("Delivery date must be greater than pick up date.");
         }
-        
-        
-        
-        //if ()
-        // Check registration code
-        //if (!customer.getRegistrationCode().equals(registrationCode)) 
-        //{
-          //  System.out.println("INVALID REGISTRATION CODE!!!");
-        //    throw new RuntimeException("The entered registration code is invalid.");
-        //};
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

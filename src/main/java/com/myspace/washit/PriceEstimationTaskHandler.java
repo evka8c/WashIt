@@ -29,7 +29,6 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         Order order = (Order) workItem.getParameter("Order");
         
         System.out.println("ESTIMATED WEIGHT?: " + order.getEstimatedWeight());
-        System.out.println("LAUNDRY PROGRAM?: " + order.getLaundryProgram());
         System.out.println("IRONING?: " + order.getIroning());
         System.out.println("ADD CLOTHES HANGERS?: " + order.getAddClothesHangers());
         
@@ -93,6 +92,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         Double priceEstimate = 0.0;
         int kinds = 0;
         
+        // Laundry type
         JsonObject laundryTypeJson = priceListJson.getJsonObject("laundryType");
         if (order.getShirts()) 
         {
@@ -124,6 +124,25 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
             priceEstimate += laundryTypeJson.getJsonNumber("jumpers").doubleValue();
             kinds++;
         }
+        priceEstimate = priceEstimate / kinds;
+        System.out.println("PRICE ESTIMATE 1: " + priceEstimate);
+        
+        // Laundry program
+        if (order.getLaundryProgram().equals("Economy")) {
+            
+        }
+        else if (order.getLaundryProgram().equals("Business")) {
+            
+        }
+        else {
+            
+        }
+        
+        // Additional services
+        
+        
+        // Estimated weight
+        
         
         return priceEstimate;
     }

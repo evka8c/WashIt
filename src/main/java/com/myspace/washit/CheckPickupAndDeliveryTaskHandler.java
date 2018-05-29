@@ -4,16 +4,13 @@ import com.myspace.washit.Order;
 import java.util.Map;
 import java.util.HashMap;
 
-//import java.util.Random;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 import java.net.URL;
-//import java.net.URLConnection;
 import javax.net.ssl.HttpsURLConnection;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
-//import java.io.DataOutputStream;
 import java.io.StringReader;
 
 import org.kie.api.runtime.process.WorkItem;

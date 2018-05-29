@@ -55,7 +55,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
             .add("jumpers", order.getJumpers())
             .add("laundryProgram", order.getLaundryProgram())
             .add("orderPaid", false)
-            .add("pickUpDate", order.getPickUpDate())
+            .add("pickUpDate", format.format(order.getPickUpDate()))
             .add("pickedUp", false)
             .add("realPrice", 0.0)
             .add("realWeight", 0.0)

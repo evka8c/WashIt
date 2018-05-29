@@ -89,6 +89,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         if (order.getShirts()) 
         {
             priceEstimate += laundryTypeJson.getJsonNumber("localDate").doubleValue();
+            kinds++;
         }
         
         String deposit = "10000";

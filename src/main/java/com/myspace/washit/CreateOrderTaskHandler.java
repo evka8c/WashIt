@@ -30,7 +30,7 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         String url = "https://washit-18577.firebaseio.com/customers.json";
         
         // Extract parameters
-        Order customer = (Customer) workItem.getParameter("Customer");
+        Order order = (Order) workItem.getParameter("Order");
         
         // Generate registration code
         String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
@@ -38,13 +38,13 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         
         // Store customer's data
         String json = Json.createObjectBuilder()
-            .add("activated", customer.getActivated())
-            .add("address", customer.getAddress())
-            .add("email", customer.getEmail())
-            .add("firstName", customer.getFirstName())
-            .add("lastName", customer.getLastName())
-            .add("password", customer.getPassword())
-            .add("registrationCode", customer.getRegistrationCode())
+        //    .add("activated", customer.getActivated())
+        //    .add("address", customer.getAddress())
+        //    .add("email", customer.getEmail())
+        //    .add("firstName", customer.getFirstName())
+        //    .add("lastName", customer.getLastName())
+        //    .add("password", customer.getPassword())
+        //    .add("registrationCode", customer.getRegistrationCode())
             .build()
             .toString();
         

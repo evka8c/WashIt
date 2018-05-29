@@ -141,7 +141,7 @@
     ],
     "results" : [
         "Order" : new ObjectDataType(),
-        "Deposit" : new StringDataType(),
+        "Amount" : new StringDataType(),
     ],
     "displayName" : "PriceEstimationTask",
     "icon" : "defaultservicenodeicon.png"

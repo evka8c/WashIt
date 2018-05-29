@@ -15,6 +15,7 @@ import java.net.HttpURLConnection;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
+import java.util.Locale;
 
 import org.kie.api.runtime.process.WorkItem;
 import org.kie.api.runtime.process.WorkItemHandler;

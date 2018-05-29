@@ -1,0 +1,1 @@
+{"id":"fe72d897-3b4a-4c0b-8401-1950e47dbe3f","name":"PaymentInfo-taskform.frm","model":{"taskName":"PaymentInfo","processId":"src.Payment","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}

@@ -41,7 +41,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         
         // Get price list
         String url = "http://www.mocky.io/v2/5b0d551531000058009d5632";
-        
+        String json = null;
         try {
             HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             

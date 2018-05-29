@@ -18,8 +18,8 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
     {
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
-        Double pickupDate = order.getPickUpDate().getTime();
-        Double deliveryDate = order.getDeliveryDate().getTime();
+        long pickupDate = order.getPickUpDate().getTime();
+        long deliveryDate = order.getDeliveryDate().getTime();
         
         System.out.println("PICK UP DATE?: " + pickupDate);
         System.out.println("DELIVERY DATE?: " + deliveryDate);
@@ -30,8 +30,6 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
             .add("deliveryDate", deliveryDate)
             .build()
             .toString();
-        
-        
 
         System.out.println("CUSTOMER CREATED!!!");
         

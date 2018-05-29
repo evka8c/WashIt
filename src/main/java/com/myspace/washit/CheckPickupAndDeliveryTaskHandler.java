@@ -71,7 +71,7 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
             
             System.out.println("INVALID DELIVERY DATE!!! XX " + dateString);
             
-            DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.XXX", Locale.ENGLISH);
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX", Locale.ENGLISH);
             availableDate = format.parse(dateString);
             
             // Response code

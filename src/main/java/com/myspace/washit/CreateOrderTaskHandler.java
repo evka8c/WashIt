@@ -3,7 +3,6 @@ package com.myspace.washit;
 import com.myspace.Order;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.Random;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
@@ -31,10 +30,6 @@ public class CreateOrderTaskHandler implements java.io.Serializable, WorkItemHan
         
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
-        
-        // Generate registration code
-        String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
-        customer.setRegistrationCode(registrationCode);
         
         // Store customer's data
         String json = Json.createObjectBuilder()

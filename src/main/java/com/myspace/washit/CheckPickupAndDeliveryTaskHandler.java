@@ -70,8 +70,8 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
 		    
-        }   catch (IOException ex) {
-            ex.printStackTrace();
+        }   catch (Exception e){
+            e.printStackTrace();
         }
         
         //if ()

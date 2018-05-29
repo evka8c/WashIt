@@ -25,31 +25,22 @@ public class MakePaymentTaskHandler implements java.io.Serializable, WorkItemHan
     public void	executeWorkItem(WorkItem workItem, WorkItemManager manager) 
     {
         // Extract parameters
-        PaymentInfo paymentIfno = (PaymentInfo) workItem.getParameter("PaymentInfo");
+        PaymentInfo paymentInfo = (PaymentInfo) workItem.getParameter("PaymentInfo");
         
-        String url = "https://washit-18577.firebaseio.com/customers.json";
+        String url = "http://www.mocky.io/v2/5b0dbbe13200004d00c1982d";
         
-        // Extract parameters
-        Customer customer = (Customer) workItem.getParameter("Customer");
-        
-        // Generate registration code
-        String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
-        customer.setRegistrationCode(registrationCode);
-        
-        // Store customer's data
+        // Send payment info
         String json = Json.createObjectBuilder()
-            .add("activated", customer.getActivated())
-            .add("address", customer.getAddress())
-            .add("email", customer.getEmail())
-            .add("firstName", customer.getFirstName())
-            .add("lastName", customer.getLastName())
-            .add("password", customer.getPassword())
-            .add("registrationCode", customer.getRegistrationCode())
+            .add("cardNumber", paymentInfo.getCardNumber())
+            .add("cvv", customer.getCvv())
+            .add("name", customer.getName())
+            .add("validThrough", customer.getValidThrough())
             .build()
             .toString();
         
+        boolean paymentSuceeded = false;
         try {
-            HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
+            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
             
             // Header
             con.setRequestMethod("POST");
@@ -79,23 +70,24 @@ public class MakePaymentTaskHandler implements java.io.Serializable, WorkItemHan
 		    }
 		    in.close();
 		    
+		    System.out.println("AAAAAAA: " + response.toString());
+		    
 		    // Store Firebase Id
-		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
-            JsonObject object = jsonReader.readObject();
-            jsonReader.close();
-            String firebaseId = object.getString("name");
-            customer.setFirebaseId(firebaseId);
+		    //JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
+            //JsonObject object = jsonReader.readObject();
+            //jsonReader.close();
+            //String firebaseId = object.getString("name");
+            //customer.setFirebaseId(firebaseId);
 
         } catch (Exception e){
             e.printStackTrace();
         }
 
-        System.out.println("CUSTOMER CREATED!!!");
+        System.out.println("!!!");
 
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();
-        result.put("RegistrationCode", registrationCode);
-        result.put("Customer", customer);
+        result.put("PaymentSucceeded", paymentSuceeded);
         manager.completeWorkItem(workItem.getId(), result);
     }
     

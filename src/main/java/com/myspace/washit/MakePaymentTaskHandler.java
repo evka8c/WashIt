@@ -27,26 +27,49 @@ public class MakePaymentTaskHandler implements java.io.Serializable, WorkItemHan
         // Extract parameters
         PaymentInfo paymentIfno = (PaymentInfo) workItem.getParameter("PaymentInfo");
         
-        // Reservation system url
-        String url = "http://www.convert-unix-time.com/api?timestamp=now&timezone=prague&format=iso8601";
+        String url = "https://washit-18577.firebaseio.com/customers.json";
         
-        // Check availability of pick up and delivery dates and times
+        // Extract parameters
+        Customer customer = (Customer) workItem.getParameter("Customer");
+        
+        // Generate registration code
+        String registrationCode = Long.toHexString(Double.doubleToLongBits(new Random().nextLong()));
+        customer.setRegistrationCode(registrationCode);
+        
+        // Store customer's data
+        String json = Json.createObjectBuilder()
+            .add("activated", customer.getActivated())
+            .add("address", customer.getAddress())
+            .add("email", customer.getEmail())
+            .add("firstName", customer.getFirstName())
+            .add("lastName", customer.getLastName())
+            .add("password", customer.getPassword())
+            .add("registrationCode", customer.getRegistrationCode())
+            .build()
+            .toString();
+        
         try {
-            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+            HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
             
             // Header
-            con.setRequestMethod("GET");
+            con.setRequestMethod("POST");
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
             con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
             con.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-
+            
             // Send
             con.setDoOutput(true);
-            con.setInstanceFollowRedirects(false);
-            con.connect();
-            
-            // Response
-            BufferedReader in = new BufferedReader(
+            DataOutputStream wr = new DataOutputStream(con.getOutputStream());
+		    wr.writeBytes(json);
+		    wr.flush();
+		    wr.close();
+		    
+		    int responseCode = con.getResponseCode();
+		    System.out.println("\nSending 'POST' request to URL : " + url);
+		    System.out.println("Post parameters : " + json);
+		    System.out.println("Response Code : " + responseCode);
+
+		    BufferedReader in = new BufferedReader(
 		        new InputStreamReader(con.getInputStream()));
 	    	String inputLine;
 		    StringBuffer response = new StringBuffer();
@@ -56,22 +79,24 @@ public class MakePaymentTaskHandler implements java.io.Serializable, WorkItemHan
 		    }
 		    in.close();
 		    
+		    // Store Firebase Id
 		    JsonReader jsonReader = Json.createReader(new StringReader(response.toString()));
             JsonObject object = jsonReader.readObject();
             jsonReader.close();
-            //String dateString = object.getString("localDate");
-            
-            // Response code
-            int responseCode = con.getResponseCode();
-		    System.out.println("\nSending 'GET' request to URL : " + url);
-		    System.out.println("Response Code : " + responseCode);
-		    
-        }   catch (Exception e) {
+            String firebaseId = object.getString("name");
+            customer.setFirebaseId(firebaseId);
+
+        } catch (Exception e){
             e.printStackTrace();
         }
-        
+
+        System.out.println("CUSTOMER CREATED!!!");
+
         // Notify manager that work item has been completed
-        manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());
+        Map<String,Object> result = new HashMap<String,Object>();
+        result.put("RegistrationCode", registrationCode);
+        result.put("Customer", customer);
+        manager.completeWorkItem(workItem.getId(), result);
     }
     
     public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}

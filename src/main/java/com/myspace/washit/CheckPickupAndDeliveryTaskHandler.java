@@ -18,9 +18,11 @@ public class CheckPickupAndDeliveryTaskHandler implements java.io.Serializable, 
     {
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
+        Date pickupDate = order.getPickUpDate();
+        Date deliveryDate = order.getDeliveryDate();
         
-        System.out.println("PICK UP DATE?: " + order.getPickUpDate());
-        System.out.println("DELIVERY DATE?: " + order.getDeliveryDate());
+        System.out.println("PICK UP DATE?: " + pickupDate);
+        System.out.println("DELIVERY DATE?: " + deliveryDate);
         
         // Notify manager that work item has been completed
         manager.completeWorkItem(workItem.getId(), new HashMap<String,Object>());

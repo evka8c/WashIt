@@ -28,12 +28,6 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         // Extract parameters
         Order order = (Order) workItem.getParameter("Order");
         
-        System.out.println("SHIRTS?: " + order.getShirts());
-        System.out.println("BLOUSES?: " + order.getBlouses());
-        System.out.println("T-SHIRTS?: " + order.gettShirts());
-        System.out.println("JEANS?: " + order.getJeans());
-        System.out.println("SHORTS?: " + order.getShorts());
-        System.out.println("JUMPERS?: " + order.getJumpers());
         System.out.println("ESTIMATED WEIGHT?: " + order.getEstimatedWeight());
         System.out.println("LAUNDRY PROGRAM?: " + order.getLaundryProgram());
         System.out.println("IRONING?: " + order.getIroning());
@@ -82,17 +76,7 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
         }
         
         // Do price estimate based on order's data
-        Double priceEstimate = 0.0;
-        int kinds = 0;
-        
-        JsonObject laundryTypeJson = priceListJson.getJsonObject("laundryType");
-        if (order.getShirts()) 
-        {
-            priceEstimate += laundryTypeJson.getJsonNumber("localDate").doubleValue();
-            kinds++;
-        }
-        
-        String deposit = "10000";
+        String deposit = String.valueOf(getPriceEstimate(order, priceListJson));
         
         // Notify manager that work item has been completed
         Map<String,Object> result = new HashMap<String,Object>();
@@ -102,4 +86,43 @@ public class PriceEstimationTaskHandler implements java.io.Serializable, WorkIte
     }
     
     public void	abortWorkItem(WorkItem workItem, WorkItemManager manager) {}
+    
+    
+    private Double getPriceEstimate(Order order, JsonObject priceListJson)
+    {
+        Double priceEstimate = 0.0;
+        int kinds = 0;
+        
+        JsonObject laundryTypeJson = priceListJson.getJsonObject("laundryType");
+        if (order.getShirts()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("shirts").doubleValue();
+            kinds++;
+        }
+        if (order.getBlouses()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("blouses").doubleValue();
+            kinds++;
+        }
+        if (order.gettShirts()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("tShirts").doubleValue();
+            kinds++;
+        }
+        if (order.getJeans()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("jeans").doubleValue();
+            kinds++;
+        }
+        if (order.getShorts()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("shorts").doubleValue();
+            kinds++;
+        }
+        if (order.getJumpers()) 
+        {
+            priceEstimate += laundryTypeJson.getJsonNumber("jumpers").doubleValue();
+            kinds++;
+        }
+    }
 }
